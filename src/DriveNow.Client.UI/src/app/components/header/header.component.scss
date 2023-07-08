@@ -5,8 +5,8 @@
    left: 0;
    z-index: 100;
    font-size: 20px;
-   padding: 20px 0 20px;
-   background-color: rgb(68, 63, 63);
+   padding: 10px 0 10px;
+   background-color: #FFFFFF;
 }
 
 .container {
@@ -16,7 +16,7 @@
 }
 
 .header-logo {
-   color: orange;
+   color: #00A8A8;
    font-size: 40px;
    font-weight: 600;
 }
@@ -28,7 +28,7 @@ a {
 }
 
 a:hover {
-   color: orange;
+   color: #00A8A8;
 }
 
 ul li {
@@ -86,13 +86,13 @@ nav ul li:hover > ul {
 }
 
 .login-button:hover {
-   background-color: orange;
+   background-color: #00A8A8;
 }
 /*************/
 
 /*Burger*/
 .header-burger {
-  display: block;
+  display: none;
   position: relative;
   width: 30px;
   height: 20px;

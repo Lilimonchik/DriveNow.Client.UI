@@ -2,7 +2,7 @@
    width: 22.5%;
    height: 70%;
    margin: 10% auto;
-   background-color: rgb(68, 63, 63);
+   background-color: #FFFFFF;
    border-radius: 10px;
 }
 
@@ -64,7 +64,7 @@ input[type="button"] {
    height: 35px;
    margin-top: 20px;
    border: none;
-   background-color: yellowgreen;;
+   background-color: #00A8A8;
    color: white;
    font-size: 18px;
    transition: transform 500ms ease;
@@ -72,7 +72,7 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-   background-color: orange;
+   background-color: #a57dea;
    transform: scale(1.05);
 }
 
@@ -84,17 +84,17 @@ p {
  
 .log-in {
    text-align: center;
-   color: white;
+   color: black;
    font-size: 15px;
    margin-top: -5px;
 }
 .log-in a {
-   color: yellowgreen;
+   color: #00A8A8;
    transition: 0.5s;
 }
 
 .log-in a:hover {
-   color: orange;
+   color: #a57dea;
 }
 
 .close-button {
@@ -107,7 +107,7 @@ p {
 }
 
 .close-button:hover {
-   background-color: orange;
+   background-color: #00A8A8;
    transition: transform 500ms ease;
 }
 

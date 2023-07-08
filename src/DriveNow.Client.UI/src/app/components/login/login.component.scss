@@ -3,7 +3,7 @@
    height: 40%;
    margin: 12% auto;
    border-radius: 10px;
-   background-color: rgb(68, 63, 63);
+   background-color: #FFFFFF;
 }
 
 @media (max-width:1200px){
@@ -59,7 +59,7 @@ input[type="button"] {
    height: 35px;
    margin-top: 20px;
    border: none;
-   background-color: yellowgreen;;
+   background-color: #00A8A8;
    color: white;
    font-size: 18px;
    transition: transform 500ms ease;
@@ -67,7 +67,7 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-   background-color: orange;
+   background-color: #a57dea;
    transform: scale(1.05);
 }
 
@@ -78,17 +78,17 @@ p {
 }
 .sign-up {
    text-align: center;
-   color: white;
+   color: black;
    font-size: 15px;
    margin-top: -2px;
 }
 .sign-up a {
-   color: yellowgreen;
+   color: #00A8A8;
    transition: 0.5s;
 }
 
 .sign-up a:hover {
-   color: orange;
+   color: #a57dea;
 }
 
 .close-button {
@@ -101,8 +101,8 @@ p {
 }
 
 .close-button:hover {
-   background-color: orange;
-   transition: transform 500ms ease;
+   background-color: #00A8A8;
+   transition: transform 300ms ease;
 }
 
 .close-button:hover {

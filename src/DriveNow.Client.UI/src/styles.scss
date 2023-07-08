@@ -77,10 +77,11 @@ h6 {
 	font-weight: inherit;
 }
 
-/*******************************************/
+/*********************************/
 
 body {
 	height: 100%;
-   background-color: black;
-   color: azure;
+	flex: 1 1 auto;
+   background-color: #FFFFFF;
+   color: black;
 }
