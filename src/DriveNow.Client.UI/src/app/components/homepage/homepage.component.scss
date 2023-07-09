@@ -26,6 +26,10 @@
    justify-content: flex-end;
 }
 
+.car-rent-btn {
+   margin: 0 auto;
+}
+
 .car-rent-button {
    color: azure;
    font-size: 22px;
@@ -34,9 +38,11 @@
    border-radius: 10px;
    background-color: #00A8A8;
    transition: 0.3s;
-   margin: 10px auto 50px auto;
+   margin: 30px;
+   margin-left: 45%;
    &:hover {
       background-color: #a57dea;
+      transform: scale(1.1);
    }
 }
 
@@ -61,4 +67,48 @@
    font-size: 17px;
    border-collapse: separate;
    border-spacing: 20px 15px;
+}
+
+/*Advantages*/
+
+.advantages-content {
+  background-image: url(/assets/images/corvette.png);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+  margin: 50px 5%;
+}
+
+.advantages-table {
+   margin: 5% auto;
+   text-align: center;
+   font-size: 17px;
+   border-collapse: separate;
+   border-spacing: 20px 15px;
+   color: azure;
+}
+
+/*Numbers*/
+
+.numbers-content {
+   color: azure;
+   background-color: #161E21;
+   margin: 50px 0;
+}
+
+.numbers-header {
+   font-family: Genos;
+   font-size: 42px;
+   font-weight: 700;
+   line-height: 46px;
+   letter-spacing: 0em;
+   text-align: center;
+}
+
+.numbers-description {
+   font-family: Roboto;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 25px;
+   letter-spacing: 0em;
+   text-align: center;
 }
