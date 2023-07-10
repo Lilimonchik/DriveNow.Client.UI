@@ -16,14 +16,21 @@ steps:
   inputs:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
-- script: |
-    npm install 
-  displayName: 'npm install '
-- task: Npm@1
-  displayName: 'npm install'
+
+- task: Npm@1  
+  displayName: 'Angular CLI latest'  
+  inputs:  
+    command: custom  
+    verbose: false  
+    customCommand: 'install -g @angular/cli'
+
+- task: CmdLine@2
+  displayName: 'yarn install install and build'
   inputs:
-    workingDir: '$(System.DefaultWorkingDirectory)/$(projectFolder)'
-    verbose: false
+    script: |
+      yarn install --immutable --immutable-cache --check-cache
+      ng build --configuration production --aot --optimization=true --build-optimizer=true --source-map=false
+    workingDirectory: '$(System.DefaultWorkingDirectory)/$(projectFolder)'
 
 - task: Bash@3
   inputs:
