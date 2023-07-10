@@ -21,7 +21,7 @@ export class AuthService {
               ) { }
 
   public loginWithGoogle(user_from_google: UserFromGoogle): Observable<Token>{
-    return this.http.post<Token>(`${this.apiUrl}`,user_from_google).pipe(
+    return this.http.post<Token>(`${this.apiUrl}SingIn/SingInWithGoogle`,user_from_google).pipe(
         tap(token=>{
           localStorage.setItem(ACCESS_TOKEN_KEY,token.access_token);
         })

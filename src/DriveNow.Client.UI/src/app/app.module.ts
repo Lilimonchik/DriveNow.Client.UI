@@ -12,6 +12,7 @@ import {GoogleLoginProvider, GoogleSigninButtonModule, SocialAuthServiceConfig} 
 import {HttpClientModule} from "@angular/common/http";
 import {AUTH_API_URL} from "./app.injection-tokens";
 import {environment} from "../environments/environmnet";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import {environment} from "../environments/environmnet";
     BrowserModule,
     AppRoutingModule,
     GoogleSigninButtonModule,
-      HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     {
