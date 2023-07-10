@@ -14,11 +14,12 @@ steps:
 - script: |
     npm install -g @angular/cli
   displayName: 'install angular cli'
-- task: Npm@1
+- task: AngularCLI@1
   inputs:
-    command: 'custom'
-    customCommand: 'ng build'
-  displayName: 'build'
+    command: 'build'
+    project: 'src/DriveNow.Client.UI'
+    prod: false
+    DisableAnalytics: false
 - task: Bash@3
   inputs:
     targetType: 'inline'
