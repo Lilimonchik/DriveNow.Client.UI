@@ -3,7 +3,12 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger: none
+variables:
+  projectFolder: '/src/Cyclix.Client.UI'
+  buildOutputFolder: '/src/Cyclix.Client.UI/dist/cyclix-app'
+trigger:
+- main
+
 pool:
   vmImage: ubuntu-latest
 steps:
@@ -17,7 +22,7 @@ steps:
 - task: Npm@1
   displayName: 'npm install'
   inputs:
-    workingDir: src/DriveNow.Client.UI
+    workingDir: '$(System.DefaultWorkingDirectory)/$(projectFolder)'
     verbose: false
 
 - task: Bash@3
@@ -30,7 +35,7 @@ steps:
 - task: AzureStaticWebApp@0
   displayName: 'Deploy Azure static webapp'
   inputs:
-    app_location: '/src/DriveNow.Client.UI'
-    output_location: '/src/DriveNow.Client.UI/dist/car-rent'
+    app_location: '$(System.DefaultWorkingDirectory)/$(projectFolder)'
+    output_location: '$(System.DefaultWorkingDirectory)/$(buildOutputFolder)' 
   env:
     azure_static_web_apps_api_token: $(deployment_token)
