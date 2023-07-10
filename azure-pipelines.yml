@@ -32,13 +32,6 @@ steps:
       ng build --configuration production --aot --optimization=true --build-optimizer=true --source-map=false
     workingDirectory: '$(System.DefaultWorkingDirectory)/$(projectFolder)'
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      pwd
-      ls -l
-      ls -l dist/
 - task: AzureStaticWebApp@0
   displayName: 'Deploy Azure static webapp'
   inputs:
