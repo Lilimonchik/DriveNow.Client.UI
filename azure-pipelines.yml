@@ -4,8 +4,8 @@
 # https://aka.ms/yaml
 
 variables:
-  projectFolder: '/src/Cyclix.Client.UI'
-  buildOutputFolder: '/src/Cyclix.Client.UI/dist/cyclix-app'
+  projectFolder: '/src/DriveNow.Client.UI'
+  buildOutputFolder: '/src/DriveNow.Client.UI/dist/car-rent'
 trigger:
 - main
 
