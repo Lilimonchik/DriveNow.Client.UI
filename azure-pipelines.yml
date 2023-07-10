@@ -35,7 +35,7 @@ steps:
 - task: AzureStaticWebApp@0
   displayName: 'Deploy Azure static webapp'
   inputs:
-    app_location: '$(System.DefaultWorkingDirectory)/$(projectFolder)'
-    output_location: '$(System.DefaultWorkingDirectory)/$(buildOutputFolder)' 
+    app_location: '$(System.DefaultWorkingDirectory)$(projectFolder)'
+    output_location: '$(System.DefaultWorkingDirectory)$(buildOutputFolder)' 
   env:
     azure_static_web_apps_api_token: $(deployment_token)
