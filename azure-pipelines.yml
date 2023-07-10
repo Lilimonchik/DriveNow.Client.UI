@@ -1,56 +1,40 @@
-# Node.js with Angular
-# Build a Node.js project that uses Angular.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
 
-trigger:
-- main
-
+trigger: none
 pool:
   vmImage: ubuntu-latest
-  
-variables:
-  projectFolder: '/src/DriveNow.Client.UI'
-  buildOutputFolder: '/src/DriveNow.Client.UI/dist/car-rent'
-
 steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
-
-- task: Npm@1  
-  displayName: 'Angular CLI latest'  
-  inputs:  
-    command: custom  
-    verbose: false  
-    customCommand: 'install -g @angular/cli'
-
-- task: CmdLine@2
-  displayName: 'yarn install install and build'
+- script: |
+    npm install -g @angular/cli
+  displayName: 'install angular cli'
+- task: Npm@1
   inputs:
+    command: 'install'
+  displayName: 'npm install'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run build'
+  displayName: 'npm build'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
     script: |
-      yarn install --immutable --immutable-cache --check-cache
-      ng build --configuration production --aot --optimization=true --build-optimizer=true --source-map=false
-    workingDirectory: '$(System.DefaultWorkingDirectory)/$(projectFolder)'
-
-## Copy the client to the staging directory
-- task: CopyFiles@2
+      pwd
+      ls -l
+      ls -l dist/
+- task: AzureStaticWebApp@0
+  displayName: 'Deploy Azure static webapp'
   inputs:
-    sourceFolder: '$(System.DefaultWorkingDirectory)/$(buildOutputFolder)' 
-    contents: '**/*' 
-    targetFolder: '$(Build.ArtifactStagingDirectory)'
-    cleanTargetFolder: true
+    app_location: '/src/DriveNow.Client.UI'
+    output_location: '/src/DriveNow.Client.UI/dist/car-rent'
+  env:
+    azure_static_web_apps_api_token: $(deployment_token)
 
-## Archive the files into a zip file for publishing
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: $(Build.ArtifactStagingDirectory)
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/cyclix.ui.zip'
-    includeRootFolder: false
-
-## Publish the zip file
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/car-rent.zip'
