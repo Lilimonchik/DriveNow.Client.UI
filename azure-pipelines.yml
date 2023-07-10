@@ -3,18 +3,38 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- main
-
+trigger: none
 pool:
   vmImage: ubuntu-latest
-
 steps:
-  - checkout: self
-    submodules: true
-  - task: AzureStaticWebApp@0
-    inputs:
-      app_location: '/src/DriveNow.Client.UI'
-      api_location: 'api'
-      output_location: '/src/DriveNow.Client.UI'
-      azure_static_web_apps_api_token: $(deployment_token)
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Install Node.js'
+- script: |
+    npm install -g @angular/cli
+  displayName: 'install angular cli'
+- task: Npm@1
+  inputs:
+    command: 'install'
+  displayName: 'npm install'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run build'
+  displayName: 'npm build'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      pwd
+      ls -l
+      ls -l dist/
+- task: AzureStaticWebApp@0
+  displayName: 'Deploy Azure static webapp'
+  inputs:
+    app_location: '/src/DriveNow.Client.UI'
+    output_location: 'dist/car-rent'
+  env:
+    azure_static_web_apps_api_token: $(deployment_token)
+
