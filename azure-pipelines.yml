@@ -14,7 +14,7 @@ steps:
     submodules: true
   - task: AzureStaticWebApp@0
     inputs:
-      app_location: '/src'
+      app_location: '/src/DriveNow.Client.UI'
       api_location: 'api'
-      output_location: '/src'
+      output_location: '/src/DriveNow.Client.UI'
       azure_static_web_apps_api_token: $(deployment_token)
