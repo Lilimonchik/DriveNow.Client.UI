@@ -16,13 +16,9 @@ steps:
   displayName: 'install angular cli'
 - task: Npm@1
   inputs:
-    command: 'install'
-  displayName: 'npm install'
-- task: Npm@1
-  inputs:
     command: 'custom'
-    customCommand: 'run build'
-  displayName: 'npm build'
+    customCommand: 'ng build'
+  displayName: 'build'
 - task: Bash@3
   inputs:
     targetType: 'inline'
@@ -37,4 +33,3 @@ steps:
     output_location: '/src/DriveNow.Client.UI/dist/car-rent'
   env:
     azure_static_web_apps_api_token: $(deployment_token)
-
