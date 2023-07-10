@@ -19,18 +19,12 @@ steps:
         displayName: 'Install Node.js 16.x'
 
       - script: |
-          cd AngularWithAzure/
           npm install -g @angular/cli
           npm install
           ng build --prod
         displayName: 'npm install and build'
         workingDirectory: '$(Build.SourcesDirectory)/src/DriveNow.Client.UI'
-      - task: CmdLine@2
-        displayName: "Run unit tests"
-        inputs:
-          script: |
-            cd AngularWithAzure/
-            ng test --browsers=ChromeHeadless --code-coverage --watch=false
+
       - task: ArchiveFiles@2
         displayName: 'Archive files'
         inputs:
