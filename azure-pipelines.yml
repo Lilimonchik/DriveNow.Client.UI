@@ -14,12 +14,12 @@ steps:
 - script: |
     npm install 
   displayName: 'npm install '
-- task: AngularCLI@1
+- task: Npm@1
+  displayName: 'npm install'
   inputs:
-    command: 'build'
-    project: 'src/DriveNow.Client.UI'
-    prod: false
-    DisableAnalytics: false
+    workingDir: src/DriveNow.Client.UI
+    verbose: false
+
 - task: Bash@3
   inputs:
     targetType: 'inline'
