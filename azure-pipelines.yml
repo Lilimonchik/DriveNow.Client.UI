@@ -18,12 +18,14 @@ steps:
           versionSpec: '18.x'
         displayName: 'Install Node.js 16.x'
 
-      - script: |
-          npm install -g @angular/cli
-          npm install
-          ng build --prod
-        displayName: 'npm install and build'
-        workingDirectory: '$(Build.SourcesDirectory)/src/DriveNow.Client.UI'
+      - task: Npm@1
+        inputs:
+          command: 'install'
+      - task: AngularCLI@1
+        inputs:
+          command: 'build'
+          prod: false
+          DisableAnalytics: false
 
       - task: ArchiveFiles@2
         displayName: 'Archive files'
