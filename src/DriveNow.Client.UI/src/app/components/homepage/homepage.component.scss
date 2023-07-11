@@ -5,8 +5,11 @@
    margin-top: 80px;
 }
 
-.car-rent-text {
-   width: 50%;
+.car-rent_car_image {
+   margin: 0px auto;
+   padding-top: 2%;
+   display: flex;
+   justify-content: flex-end;
 }
 
 .car-rent-header {
@@ -20,10 +23,15 @@
    text-align: center;
 }
 
-.car-rent_car_image {
-   margin: 50px auto;
-   display: flex;
-   justify-content: flex-end;
+.car-rent-text {
+   font-family: Genos;
+   font-size: 40px;
+   font-weight: 600;
+   line-height: 70px;
+   letter-spacing: 0px;
+   text-align: left;
+   color: azure;
+   text-align: center;
 }
 
 .car-rent-btn {
@@ -32,23 +40,23 @@
 
 .car-rent-button {
    color: azure;
-   font-size: 22px;
-   width: 140px;
-   height: 40px;
+   font-size: 25px;
+   width: 20%;
+   height: 50px;
    border-radius: 10px;
    background-color: #00A8A8;
    transition: 0.3s;
    margin: 30px;
-   margin-left: 45%;
+   margin-left: 40%;
    &:hover {
-      background-color: #a57dea;
+      background-color: #8882f8;
       transform: scale(1.1);
    }
 }
 
 /*Welcome*/
 
-.welcome {
+.welcome-header {
    font-size: 40px;
    font-weight: 600;
    text-align: center;
@@ -72,19 +80,25 @@
 /*Advantages*/
 
 .advantages-content {
-  background-image: url(/assets/images/corvette.png);
-  background-size: 70% 100%;
+  background-image: url(/assets/images/ferrari.png);
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: 50px 5%;
 }
 
 .advantages-table {
+   padding: 6%;
    margin: 5% auto;
    text-align: center;
    font-size: 17px;
    border-collapse: separate;
    border-spacing: 20px 15px;
    color: azure;
+}
+
+.advantages-bold {
+   font-size: 20px;
+   font-weight: 700;
 }
 
 /*Numbers*/
@@ -96,6 +110,7 @@
 }
 
 .numbers-header {
+   padding-top: 1%;
    font-family: Genos;
    font-size: 42px;
    font-weight: 700;
@@ -111,4 +126,64 @@
    line-height: 25px;
    letter-spacing: 0em;
    text-align: center;
+}
+
+.numbers-cards {
+   margin: 20px 0px 20px 6%;
+}
+
+/*Popular*/
+
+.popular {
+   margin: 1%;
+}
+
+.popular-text {
+   font-family: Genos;
+   font-size: 42px;
+   font-weight: 700;
+   line-height: 46px;
+   letter-spacing: 0em;
+   text-align: center;
+   margin-bottom: 30px;
+}
+
+.popular-table {
+   margin-left: 4%;
+}
+
+.popular-btn {
+   margin: 0 auto;
+}
+
+.popular-button {
+   color: azure;
+   font-size: 22px;
+   width: 140px;
+   height: 40px;
+   border-radius: 10px;
+   background-color: #00A8A8;
+   transition: 0.3s;
+   margin: 30px;
+   margin-left: 45%;
+   &:hover {
+      background-color: #8882f8;
+      transform: scale(1.1);
+   }
+}
+
+.popular-car-photo {
+   width: 80%;
+}
+
+.table-row-car-name {
+   font-size: 25px;
+}
+
+.table-row-car-desc {
+   font-size: 18px;
+}
+
+.table-row-more-info {
+   font-size: 20px;
 }
