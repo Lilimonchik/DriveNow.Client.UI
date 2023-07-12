@@ -1,6 +1,5 @@
 .main-header {
-   position: fixed;
-   width: 100%;
+   max-width: 100%;
    top: 0;
    left: 0;
    z-index: 100;
@@ -10,8 +9,6 @@
 }
 
 .container {
-   max-width: 1400px;
-   margin: 0 auto;
    padding: 0px 10px;
 }
 
@@ -47,12 +44,12 @@ ul li {
 
 .nav-main__list {
    display: flex;
-   margin: 15px;
+   margin: 0px;
 }
 
 .nav-main__list li {
    display: flex;
-   margin-right: 25px;
+   margin-left: 20px;
 }
 
 /*Dropdown*/

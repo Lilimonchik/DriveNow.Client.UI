@@ -1,5 +1,4 @@
 .main-footer {
-   position: relative;
    width: 100%;
    bottom: 0;
    left: 0;
@@ -15,30 +14,37 @@ ul > li {
 }
 
 .address {
-   padding: 0px 33%;
+   margin: 1%;
+   text-align: center;
 }
 
 /*Socials*/
-
+ 
 .socials {
-   padding: 0px 70%;
-   padding-right: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 2%;
 }
 
 .youtube {
    width: 40px;
    height: 28px;
-   margin: 50%;
+   margin-right: 20px;
 }
 
 .instagram {
-   width: 42px;
-   height: 42px;
-   margin: 25%;
+   width: 40px;
+   height: 40px;
+   margin-right: 20px;
 }
 
 .facebook {
    width: 19px;
    height: 38px;
-   margin: 50%;
+}
+
+.footer-rights {
+   margin: 1%;
+   text-align: center;
 }
