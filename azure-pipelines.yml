@@ -1,0 +1,56 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+  
+variables:
+  projectFolder: '/src/DriveNow.Client.UI'
+  buildOutputFolder: '/src/DriveNow.Client.UI/dist/car-rent'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Install Node.js'
+
+- task: Npm@1  
+  displayName: 'Angular CLI latest'  
+  inputs:  
+    command: custom  
+    verbose: false  
+    customCommand: 'install -g @angular/cli'
+
+- task: CmdLine@2
+  displayName: 'yarn install install and build'
+  inputs:
+    script: |
+      yarn install --immutable --immutable-cache --check-cache
+      ng build --configuration production --aot --optimization=true --build-optimizer=true --source-map=false
+    workingDirectory: '$(System.DefaultWorkingDirectory)/$(projectFolder)'
+
+## Copy the client to the staging directory
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(System.DefaultWorkingDirectory)/$(buildOutputFolder)' 
+    contents: '**/*' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    cleanTargetFolder: true
+
+## Archive the files into a zip file for publishing
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: $(Build.ArtifactStagingDirectory)
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/drivenow.ui.zip'
+    includeRootFolder: false
+
+## Publish the zip file
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/drivenow.ui.zip'
