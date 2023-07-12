@@ -22,11 +22,7 @@ export class SignupComponent implements OnInit{
   ngOnInit() {
     this.socialService.authState.subscribe((user)=>{
       this.socialUser = user;
-      var user_google = new UserFromGoogle;
-      user_google.firstName = user.firstName;
-      user_google.secondName = user.lastName;
-      user_google.email = user.email;
-      this.auth.loginWithGoogle(user_google).subscribe(res=>{
+      this.auth.loginWithGoogle(user.idToken).subscribe(res=>{
         console.log(res);
         this.router.navigate(['/']);
       })
