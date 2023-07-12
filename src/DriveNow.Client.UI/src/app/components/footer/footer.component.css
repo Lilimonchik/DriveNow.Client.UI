@@ -1,0 +1,44 @@
+.main-footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  font-size: 20px;
+  padding: 10px 0 10px;
+  color: azure;
+  background-color: #161E21;
+  /* Socials */
+}
+.main-footer ul > li {
+  list-style: none;
+}
+.main-footer .address {
+  margin: 1%;
+  text-align: center;
+}
+.main-footer .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+}
+.main-footer .socials .youtube {
+  width: 40px;
+  height: 28px;
+  margin-right: 20px;
+}
+.main-footer .socials .instagram {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.main-footer .socials .facebook {
+  width: 19px;
+  height: 38px;
+}
+.main-footer .footer-rights {
+  margin: 1%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=footer.component.css.map */

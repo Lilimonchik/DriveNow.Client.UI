@@ -27,12 +27,9 @@ export class LoginComponent implements OnInit{
   ngOnInit() {
     this.socialAuthService.authState.subscribe((user)=>{
       this.socialUser = user;
-      console.log(this.socialUser);
-      var user_google = new UserFromGoogle;
-      user_google.firstName = user.firstName;
-      user_google.secondName = user.lastName;
-      user_google.email = user.email;
-      this.auth.loginWithGoogle(user_google).subscribe(res=>{
+      var token = this.socialUser.idToken;
+      console.log(token);
+      this.auth.loginWithGoogle(token).subscribe(res=>{
         console.log(res);
         this.router.navigate(["/"]);
           }
