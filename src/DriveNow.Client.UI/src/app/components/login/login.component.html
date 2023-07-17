@@ -2,14 +2,18 @@
    <a routerLink="/"><img class="close-button" src="/assets/images/close.png" alt="Close"></a>
    <h1>Login</h1>
    <div class="login-container">
-      <form class="login-form">
+      <form class="login-form"
+      [formGroup]="loginForm"
+            (ngSubmit)="login()"
+      >
          <label>Email</label>
-         <input type="email" placeholder="" />
+         <input type="email" placeholder="" formControlName="email">
          <label>Password</label>
-         <input type="password" placeholder="" />
-         <input type="button" value="Submit" />
+         <input type="password" placeholder="" formControlName="password">
+         <input type="submit" value="Submit" />
          <p class="sign-up">
             Not have an account? <a routerLink="/signup">Sign Up here</a>
+            <asl-google-signin-button></asl-google-signin-button>
          </p>
       </form>
    </div>

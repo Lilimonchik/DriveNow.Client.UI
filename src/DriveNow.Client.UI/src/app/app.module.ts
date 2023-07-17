@@ -10,6 +10,11 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarlistingComponent } from './components/carlisting/carlisting.component';
 import { CardetailsComponent } from './components/cardetails/cardetails.component';
+import {GoogleLoginProvider, GoogleSigninButtonModule, SocialAuthServiceConfig} from "@abacritt/angularx-social-login";
+import {HttpClientModule} from "@angular/common/http";
+import {AUTH_API_URL} from "./app.injection-tokens";
+import {environment} from "../environments/environmnet";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,9 +29,30 @@ import { CardetailsComponent } from './components/cardetails/cardetails.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleSigninButtonModule,
+    HttpClientModule,
+    FormsModule,
+      ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: AUTH_API_URL,
+      useValue:environment.authApi,
+    },
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider('369595234454-n8mv45pctmor3h6eemef6a5vtk6movc4.apps.googleusercontent.com'),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

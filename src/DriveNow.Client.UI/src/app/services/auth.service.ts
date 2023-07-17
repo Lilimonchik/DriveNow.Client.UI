@@ -2,7 +2,7 @@ import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {AUTH_API_URL} from "../app.injection-tokens";
 import {UserFromGoogle} from "../interfaces/user-from-google";
-import {Observable, tap} from "rxjs";
+import {catchError, Observable, tap, throwError} from "rxjs";
 import {Token} from "../interfaces/token";
 import {Router} from "@angular/router";
 export const ACCESS_TOKEN_KEY = 'bookstore_access_token';
@@ -20,23 +20,33 @@ export class AuthService {
               private router: Router
               ) { }
 
-  public loginWithGoogle(credential: string): Observable<Token>{
-    return this.http.post<Token>(`${this.apiUrl}SingIn/SingInWithGoogle`,{credential: credential}).pipe(
+  public loginWithGoogle(credential: string){
+    return this.http.post(`${this.apiUrl}SingIn/SingInWithGoogle`,{credential: credential},{responseType:"text"}).pipe(
         tap(token=>{
-          localStorage.setItem(ACCESS_TOKEN_KEY,token.access_token);
+            if(token != null) {
+                localStorage.setItem(ACCESS_TOKEN_KEY, token);
+            }
+            else{
+                console.log("Error!");
+            }
         })
     )
   }
-  public login(User: User):Observable<Token>{
-      return this.http.post<Token>(`${this.apiUrl}SingIn/SingInUser`,User).pipe(
+  public login(User: User){
+      return this.http.post(`${this.apiUrl}SingIn/SingInUser`,User,{responseType: 'text'}).pipe(
           tap(token=>{
-              localStorage.setItem(ACCESS_TOKEN_KEY,token.access_token);
-          })
+              if(token != null) {
+                  localStorage.setItem(ACCESS_TOKEN_KEY, token);
+                  console.log(token);
+              }
+              else{
+                  console.log("Error!");
+              }
+          }),
       )
   }
   public logout(): void{
       localStorage.removeItem(ACCESS_TOKEN_KEY);
       this.router.navigate(['/']);
   }
-
 }
