@@ -1,0 +1,198 @@
+.main-container {
+  max-width: 100%;
+  margin: 0 3%;
+}
+
+/*Car-rent*/
+.car-rent {
+  background-color: #161E21;
+  height: 100%;
+  margin-top: 0px;
+}
+
+.car-rent_car_image {
+  width: 60%;
+  margin: 0px auto;
+  padding-top: 2%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.car-rent-header {
+  font-family: Genos;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 140px;
+  letter-spacing: -5px;
+  text-align: left;
+  color: azure;
+  text-align: center;
+}
+
+.car-rent-text {
+  font-family: Genos;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 70px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: azure;
+  text-align: center;
+}
+
+.car-rent-btn {
+  margin: 0 auto;
+}
+
+.car-rent-button {
+  color: azure;
+  font-size: 25px;
+  width: 20%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #00A8A8;
+  transition: 0.3s;
+  margin: 30px;
+  margin-left: 40%;
+}
+.car-rent-button:hover {
+  background-color: #8882f8;
+  transform: scale(1.1);
+}
+
+/*Welcome*/
+.welcome {
+  max-width: 100%;
+}
+
+.welcome-header {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.welcome-rent {
+  text-align: center;
+  margin: 15px;
+  font-size: 23px;
+}
+
+.welcome-table {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 17px;
+  border-spacing: 20px 15px;
+}
+
+/*Advantages*/
+.advantages-content {
+  background-image: url(/assets/images/ferrari.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 50px 1%;
+}
+
+.advantages-table {
+  padding: 6%;
+  margin: 5% auto;
+  text-align: center;
+  font-size: 17px;
+  border-collapse: separate;
+  border-spacing: 20px 15px;
+  color: azure;
+}
+
+.advantages-bold {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*Numbers*/
+.numbers-content {
+  color: azure;
+  background-color: #161E21;
+  margin: 50px 0px;
+}
+
+.numbers-header {
+  padding-top: 1%;
+  font-family: Genos;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.numbers-description {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.numbers-cards {
+  max-width: 100%;
+  margin: 20px 0px 20px 5%;
+}
+
+/*Popular*/
+.popular {
+  max-width: 100%;
+  margin: 4%;
+}
+
+.popular-table {
+  border-collapse: collapse;
+}
+
+.popular-text {
+  font-family: Genos;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.popular-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.popular-button {
+  color: azure;
+  font-size: 22px;
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #00A8A8;
+  transition: 0.3s;
+  margin: 30px;
+}
+.popular-button:hover {
+  background-color: #8882f8;
+  transform: scale(1.1);
+}
+
+.popular-car-photo {
+  width: 80%;
+}
+
+.table-row-car-name {
+  font-size: 25px;
+}
+
+.table-row-car-desc {
+  font-size: 18px;
+}
+
+.table-row-more-info {
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=homepage.component.css.map */
