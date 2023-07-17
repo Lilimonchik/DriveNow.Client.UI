@@ -56,9 +56,9 @@ ul li {
 
 nav ul li ul {
    position: absolute;
-   top: 60%;
+   top: 6%;
    right: 22%;
-   width: 180px;
+   width: 10%;
    background: whitesmoke;
    color: black;
    z-index: 110;
@@ -72,6 +72,24 @@ nav ul li:active {
 nav ul li:hover > ul {
    display: initial;
 }
+
+@media (max-width:767px) {
+   nav ul li ul {
+      position: absolute;
+      top: 20%;
+      right: 22%;
+      width: 10%;
+      background: whitesmoke;
+      color: black;
+      z-index: 110;
+      display: none;
+   }
+}
+
+.sub-main-nav__link {
+   margin: 2%;
+}
+
 /*************/
 
 /*Login*/
@@ -142,7 +160,7 @@ nav ul li:hover > ul {
    position: fixed;
    top: 0;
    right: -100%;
-   width: 300px;
+   width: 60%;
    height: 100%;
    margin: 0;
    padding: 80px 0;
@@ -202,5 +220,18 @@ nav ul li:hover > ul {
 
    .burger-menu {
       display: initial;
+   }
+}
+
+@media (max-width:415px){
+
+   .nav-main__list li {
+      margin-left: 0px;
+   }
+
+   .header-logo {
+      color: #00A8A8;
+      font-size: 20px;
+      font-weight: 600;
    }
 }

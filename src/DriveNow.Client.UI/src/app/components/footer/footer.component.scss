@@ -48,3 +48,32 @@ ul > li {
    margin: 1%;
    text-align: center;
 }
+
+@media (max-width:400px) {
+   .main-footer {
+      font-size: 15px;
+   }
+   
+   .youtube {
+      width: 20px;
+      height: 14px;
+      margin-right: 10px;
+      margin-top: 10%;
+   }
+   
+   .instagram {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+   }
+   
+   .facebook {
+      width: 9.5px;
+      height: 19px;
+   }
+   
+   .footer-rights {
+      margin: 1%;
+      text-align: center;
+   }
+}

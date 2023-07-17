@@ -2,16 +2,15 @@
    <a routerLink="/"><img class="close-button" src="/assets/images/close.png" alt="Close"></a>
    <h1>Login</h1>
    <div class="login-container">
-      <form class="formsingin" [formGroup]="singInForm" (ngSubmit)="login()">
+      <form class="login-form">
          <label>Email</label>
-         <input type="text" placeholder="" formControlName="email">
-         <label>Number</label>
-         <input type="text" placeholder="" formControlName="number">
+         <input type="email" placeholder="" />
          <label>Password</label>
-         <input type="password" placeholder="" formControlName="password">
-         <button [disabled]="!singInForm.valid">Submit</button>
-         <p class="sign-up">Not have an account? <a routerLink="/signup">Sign Up here</a></p>
-         <asl-google-signin-button class="login-google-button" (click)="loginWithGoogle()">Google</asl-google-signin-button>
+         <input type="password" placeholder="" />
+         <input type="button" value="Submit" />
+         <p class="sign-up">
+            Not have an account? <a routerLink="/signup">Sign Up here</a>
+         </p>
       </form>
    </div>
 </div>

@@ -20,14 +20,13 @@ export class AuthService {
               private router: Router
               ) { }
 
-  public loginWithGoogle(user_from_google: UserFromGoogle): Observable<Token>{
-    return this.http.post<Token>(`${this.apiUrl}SingIn/SingInWithGoogle`,user_from_google).pipe(
+  public loginWithGoogle(credential: string): Observable<Token>{
+    return this.http.post<Token>(`${this.apiUrl}SingIn/SingInWithGoogle`,{credential: credential}).pipe(
         tap(token=>{
           localStorage.setItem(ACCESS_TOKEN_KEY,token.access_token);
         })
     )
   }
-
   public login(User: User):Observable<Token>{
       return this.http.post<Token>(`${this.apiUrl}SingIn/SingInUser`,User).pipe(
           tap(token=>{
@@ -35,7 +34,6 @@ export class AuthService {
           })
       )
   }
-
   public logout(): void{
       localStorage.removeItem(ACCESS_TOKEN_KEY);
       this.router.navigate(['/']);
