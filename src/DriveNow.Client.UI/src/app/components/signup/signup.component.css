@@ -2,9 +2,10 @@
   width: 22.5%;
   height: 70%;
   margin: 10% auto;
-  background-color: #FFFFFF;
+  background-color: rgb(68, 63, 63);
   border-radius: 10px;
 }
+
 @media (max-width: 1200px) {
   .signup-box {
     width: 50%;
@@ -19,30 +20,36 @@
     margin: 25% auto;
   }
 }
-.signup-box h1 {
+h1 {
   text-align: center;
   font-size: 20px;
 }
-.signup-box h4 {
+
+h4 {
   text-align: center;
 }
-.signup-box .signup-container {
+
+.signup-container {
   max-width: 100%;
   max-height: 100%;
 }
-.signup-box .signup-form {
+
+.signup-form {
   margin: 20px;
 }
-.signup-box .signup-form form {
+
+form {
   width: 300px;
   margin-left: 20px;
 }
-.signup-box .signup-form form label {
+
+form label {
   display: flex;
   margin-top: 20px;
   font-size: 18px;
 }
-.signup-box .signup-form form input {
+
+form input {
   width: 100%;
   padding: 7px;
   border: none;
@@ -50,39 +57,47 @@
   border-radius: 6px;
   outline: none;
 }
-.signup-box .signup-form input[type=button] {
+
+input[type=button] {
   width: 320px;
   height: 35px;
   margin-top: 20px;
   border: none;
-  background-color: #00A8A8;
+  background-color: yellowgreen;
   color: white;
   font-size: 18px;
-  transition: transform 500ms ease, background-color 0.5s;
+  transition: transform 500ms ease;
+  transition: 0.5s;
 }
-.signup-box .signup-form input[type=button]:hover {
-  background-color: #8882f8;
+
+input[type=button]:hover {
+  background-color: orange;
   transform: scale(1.05);
 }
-.signup-box .signup-form p {
+
+p {
   text-align: center;
   padding-top: 20px;
   font-size: 15px;
 }
-.signup-box .signup-form .log-in {
+
+.log-in {
   text-align: center;
-  color: black;
+  color: white;
   font-size: 15px;
   margin-top: -5px;
 }
-.signup-box .signup-form .log-in a {
-  color: #00A8A8;
+
+.log-in a {
+  color: yellowgreen;
   transition: 0.5s;
 }
-.signup-box .signup-form .log-in a:hover {
-  color: #a57dea;
+
+.log-in a:hover {
+  color: orange;
 }
-.signup-box .signup-form .close-button {
+
+.close-button {
   margin: 15px 15px 0 15px;
   width: 25px;
   height: 25px;
@@ -90,11 +105,13 @@
   border-radius: 12px;
   transition: 0.3s;
 }
-.signup-box .signup-form .close-button:hover {
-  background-color: #00A8A8;
+
+.close-button:hover {
+  background-color: orange;
   transition: transform 500ms ease;
 }
-.signup-box .signup-form .close-button:hover {
+
+.close-button:hover {
   transform: scale(1.3);
 }
 

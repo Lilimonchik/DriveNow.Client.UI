@@ -3,8 +3,9 @@
   height: 40%;
   margin: 12% auto;
   border-radius: 10px;
-  background-color: #FFFFFF;
+  background-color: rgb(68, 63, 63);
 }
+
 @media (max-width: 1200px) {
   .login-box {
     width: 50%;
@@ -19,34 +20,31 @@
     margin: 35% auto;
   }
 }
-.login-box label {
-  margin-bottom: 5px;
-  width: 100%;
-}
-.login-box h1 {
+h1 {
   text-align: center;
   font-size: 20px;
 }
-.login-box h4 {
+
+h4 {
   text-align: center;
 }
-.login-box .login-container {
+
+.login-container {
   max-width: 100%;
   max-height: 100%;
-  box-shadow: 0px 0px 2px 0px #6f6d6d;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
 }
-.login-box .login-form {
+
+.login-form {
   margin: 20px;
 }
-.login-box form label {
+
+form label {
   display: flex;
   margin-top: 20px;
   font-size: 18px;
 }
-.login-box form input {
+
+form input {
   width: 100%;
   padding: 7px;
   border: none;
@@ -54,39 +52,47 @@
   border-radius: 6px;
   outline: none;
 }
-.login-box input[type=button] {
+
+input[type=button] {
   width: 320px;
   height: 35px;
   margin-top: 20px;
   border: none;
-  background-color: #00A8A8;
+  background-color: yellowgreen;
   color: white;
   font-size: 18px;
-  transition: transform 500ms ease, background-color 0.5s;
+  transition: transform 500ms ease;
+  transition: 0.5s;
 }
-.login-box input[type=button]:hover {
-  background-color: #8882f8;
+
+input[type=button]:hover {
+  background-color: orange;
   transform: scale(1.05);
 }
-.login-box p {
+
+p {
   text-align: center;
   padding-top: 20px;
   font-size: 15px;
 }
-.login-box .sign-up {
+
+.sign-up {
   text-align: center;
-  color: black;
+  color: white;
   font-size: 15px;
   margin-top: -2px;
 }
-.login-box .sign-up a {
-  color: #00A8A8;
+
+.sign-up a {
+  color: yellowgreen;
   transition: 0.5s;
 }
-.login-box .sign-up a:hover {
-  color: #a57dea;
+
+.sign-up a:hover {
+  color: orange;
 }
-.login-box .close-button {
+
+.close-button {
   margin: 15px 15px 0 15px;
   width: 25px;
   height: 25px;
@@ -94,11 +100,13 @@
   border-radius: 12px;
   transition: 0.3s;
 }
-.login-box .close-button:hover {
-  background-color: #00A8A8;
-  transition: transform 300ms ease;
+
+.close-button:hover {
+  background-color: orange;
+  transition: transform 500ms ease;
 }
-.login-box .close-button:hover {
+
+.close-button:hover {
   transform: scale(1.3);
 }
 

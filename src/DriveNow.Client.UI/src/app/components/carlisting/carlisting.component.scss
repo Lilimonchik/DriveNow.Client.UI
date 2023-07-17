@@ -1,0 +1,82 @@
+.carlisting {
+   max-width: 100%;
+}
+
+.carlisting-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr;
+}
+
+.carlisting-header {
+   font-size: 40px;
+   text-align: center;
+   margin: 2% 0;
+}
+
+.carlisting-card {
+   height: 254px;
+   background: radial-gradient(circle, rgba(136,130,248,1) 0%, rgba(0,168,168,1) 100%);
+   border: none;
+   border-radius: 10px;
+   padding-top: 10px;
+   position: relative;
+   font-family: inherit;
+   margin: 5%;
+ }
+ 
+ .carlisting-description {
+   font-weight: 400;
+   color: white;
+   display: block;
+   text-align: center;
+   padding-top: 5px;
+   font-size: 1em;
+ }
+ 
+.carlisting-img {
+   width: 70%;
+   height: 40%;
+   background: #e8e8e8;
+   border-radius: 10px;
+   margin: auto;
+   margin-top: 20px;
+ }
+
+ .carlisting-car-name {
+   font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 1.3em;
+ }
+ 
+ .carlisting-button {
+   padding: 8px 25px;
+   display: block;
+   margin: auto;
+   border-radius: 8px;
+   border: none;
+   margin-top: 30px;
+   background: #e8e8e8;
+   color: #111111;
+   font-weight: 600;
+   transition: 300ms;
+   &:hover {
+    background: #212121;
+    color: #ffffff;
+  }
+ }
+
+ @media (max-width:767px) {
+   .carlisting-container {
+      grid-template-columns:  1fr 1fr;
+   }
+ }
+
+ @media (max-width:450px) {
+   .carlisting-container {
+      grid-template-columns:  1fr;
+   }
+ }
