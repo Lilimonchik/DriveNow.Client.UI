@@ -4,8 +4,9 @@
 
 .carlisting-container {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 1fr;
+   grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+   grid-gap: 1%;
+   margin: 3%;
 }
 
 .carlisting-header {
@@ -14,12 +15,21 @@
    margin: 2% 0;
 }
 
+@media (max-width:767px) {
+   .carlisting-header {
+      font-size: 25px;
+      text-align: center;
+      margin: 2% 0;
+   }
+}
+
 .carlisting-card {
    height: 254px;
-   background: radial-gradient(circle, rgba(136,130,248,1) 0%, rgba(0,168,168,1) 100%);
+   background: radial-gradient(circle, rgba(31,46,208,0.8576680672268908) 0%, rgba(0,168,168,0.8604691876750701) 100%);
+   //background: radial-gradient(circle, rgba(136,130,248,1) 0%, rgba(0,168,168,1) 100%);
    border: none;
    border-radius: 10px;
-   padding-top: 10px;
+   padding-top: 1%;
    position: relative;
    font-family: inherit;
    margin: 5%;
@@ -35,12 +45,12 @@
  }
  
 .carlisting-img {
-   width: 70%;
-   height: 40%;
+   width: 85%;
+   height: 50%;
    background: #e8e8e8;
    border-radius: 10px;
    margin: auto;
-   margin-top: 20px;
+   margin-top: 5%;
  }
 
  .carlisting-car-name {
@@ -48,17 +58,17 @@
     color: white;
     text-align: center;
     display: block;
-    padding-top: 10px;
+    padding-top: 2%;
     font-size: 1.3em;
  }
  
  .carlisting-button {
-   padding: 8px 25px;
+   padding: 3% 10%;
    display: block;
    margin: auto;
    border-radius: 8px;
    border: none;
-   margin-top: 30px;
+   margin-top: 5%;
    background: #e8e8e8;
    color: #111111;
    font-weight: 600;
@@ -67,16 +77,4 @@
     background: #212121;
     color: #ffffff;
   }
- }
-
- @media (max-width:767px) {
-   .carlisting-container {
-      grid-template-columns:  1fr 1fr;
-   }
- }
-
- @media (max-width:450px) {
-   .carlisting-container {
-      grid-template-columns:  1fr;
-   }
  }
