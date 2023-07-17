@@ -7,42 +7,71 @@
    padding: 10px 0 10px;
    color: azure;
    background-color: #161E21;
+}
 
-   ul > li {
-      list-style: none;
+ul > li {
+   list-style: none;
+}
+
+.address {
+   margin: 1%;
+   text-align: center;
+}
+
+/*Socials*/
+ 
+.socials {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 2%;
+}
+
+.youtube {
+   width: 40px;
+   height: 28px;
+   margin-right: 20px;
+}
+
+.instagram {
+   width: 40px;
+   height: 40px;
+   margin-right: 20px;
+}
+
+.facebook {
+   width: 19px;
+   height: 38px;
+}
+
+.footer-rights {
+   margin: 1%;
+   text-align: center;
+}
+
+@media (max-width:400px) {
+   .main-footer {
+      font-size: 15px;
    }
-
-   .address {
-      margin: 1%;
-      text-align: center;
+   
+   .youtube {
+      width: 20px;
+      height: 14px;
+      margin-right: 10px;
+      margin-top: 10%;
    }
-
-   /* Socials */
-
-   .socials {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 2%;
-
-      .youtube {
-         width: 40px;
-         height: 28px;
-         margin-right: 20px;
-      }
-
-      .instagram {
-         width: 40px;
-         height: 40px;
-         margin-right: 20px;
-      }
-
-      .facebook {
-         width: 19px;
-         height: 38px;
-      }
+   
+   .instagram {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
    }
-
+   
+   .facebook {
+      width: 9.5px;
+      height: 19px;
+   }
+   
    .footer-rights {
       margin: 1%;
       text-align: center;
