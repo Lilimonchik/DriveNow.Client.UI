@@ -1,0 +1,24 @@
+.cardetails {
+   max-width: 100%;
+}
+
+.cardetails-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+   grid-gap: 1%;
+   margin: 3%;
+}
+
+.cardetails-header {
+   font-size: 40px;
+   text-align: center;
+   margin: 2% 0;
+}
+
+@media (max-width:767px) {
+   .cardetails-header {
+      font-size: 25px;
+      text-align: center;
+      margin: 2% 0;
+   }
+}
