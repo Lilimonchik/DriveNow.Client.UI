@@ -36,12 +36,18 @@
  }
  
  .carlisting-description {
+   max-width: 100%;
    font-weight: 400;
    color: white;
    display: block;
    text-align: center;
    padding-top: 5px;
    font-size: 1em;
+ }
+
+ .carlisting-table-image {
+   height: 15%;
+   width: 15%;
  }
  
 .carlisting-img {
