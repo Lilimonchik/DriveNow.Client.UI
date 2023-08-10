@@ -11,10 +11,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CarlistingComponent } from './components/carlisting/carlisting.component';
 import { CardetailsComponent } from './components/cardetails/cardetails.component';
 import {GoogleLoginProvider, GoogleSigninButtonModule, SocialAuthServiceConfig} from "@abacritt/angularx-social-login";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
 import {AUTH_API_URL} from "./app.injection-tokens";
 import {environment} from "../environments/environmnet";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { MapCarComponent } from './components/map-car/map-car.component';
+import {GoogleMapsModule} from "@angular/google-maps";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     HomepageComponent,
     FooterComponent,
     CarlistingComponent,
-    CardetailsComponent
+    CardetailsComponent,
+    MapCarComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     GoogleSigninButtonModule,
     HttpClientModule,
     FormsModule,
-      ReactiveFormsModule
+    ReactiveFormsModule,
+    GoogleMapsModule,
+    HttpClientJsonpModule
   ],
   providers: [
     {

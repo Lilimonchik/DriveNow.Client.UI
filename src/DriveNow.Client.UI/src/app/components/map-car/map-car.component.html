@@ -1,0 +1,43 @@
+<google-map
+        class="main-map"
+        height="100vh"
+        width="100vw"
+        [zoom]="12"
+        [center]="{lat: latitude, lng: longitude}"
+        [options]="mapOptions"
+>
+<map-marker
+
+        *ngFor="let point of cars; let i = index;"
+        #marker="mapMarker"
+        class="marker"
+        (mapClick)="openInfoWindow(marker)"
+        [position]="{lat:coordinates[i].latitude, lng: coordinates[i].longitude}"
+        [icon]="iconOptions"
+>
+    <map-info-window class="content" *ngIf="check">
+        <div class="photo">
+            <img src="/assets/images/bmwe60.png" alt="" class="main-photo">
+        </div>
+        <div class="main-info">
+            <span>Car Name</span>
+        </div>
+        <div class="function">
+            <button class="rent-button" (click)="startTimer(point.carId)"><span class="rent">Rent</span></button>
+        </div>
+    </map-info-window>
+    <map-info-window *ngIf="!check" class="content-rent">
+        <div class="photo-rent">
+            <img src="/assets/images/bmwe60.png" alt="" class="main-photo">
+        </div>
+        <div class="main-info-rent">
+            <span>Car Name</span>
+        </div>
+        <div class="function-rent">
+            <span>Timer: {{ hours }}h {{ minutes }}m {{ seconds }}s</span>
+            <button class="rent-button-second" (click)="pauseTimer()"><span class="rent-second">Stop</span></button>
+        </div>
+    </map-info-window>
+</map-marker>
+
+</google-map>

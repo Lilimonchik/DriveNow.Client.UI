@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"cardetails.component.css"}
+{"version":3,"sourceRoot":"","sources":["cardetails.component.scss"],"names":[],"mappings":"AAAA;EACG;;;AAGH;EACG;EACA;EACA;EACA;;;AAGH;EACG;EACA;EACA;;;AAGH;EACG;IACG;IACA;IACA","file":"cardetails.component.css"}
