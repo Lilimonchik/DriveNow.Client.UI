@@ -23,7 +23,7 @@
             <span>Car Name</span>
         </div>
         <div class="function">
-            <button class="rent-button" (click)="startTimer(point.carId)"><span class="rent">Rent</span></button>
+            <button class="rent-button" (click)="startTimer(); changeStatusCar(point.carId); createCartItem(point.carId,point.price)"><span class="rent">Rent</span></button>
         </div>
     </map-info-window>
     <map-info-window *ngIf="!check" class="content-rent">
@@ -35,7 +35,7 @@
         </div>
         <div class="function-rent">
             <span>Timer: {{ hours }}h {{ minutes }}m {{ seconds }}s</span>
-            <button class="rent-button-second" (click)="pauseTimer()"><span class="rent-second">Stop</span></button>
+            <button class="rent-button-second" (click)="createOrder(point.carId,'');pauseTimer()"><span class="rent-second">Stop</span></button>
         </div>
     </map-info-window>
 </map-marker>

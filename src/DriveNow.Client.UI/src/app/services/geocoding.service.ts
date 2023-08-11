@@ -6,7 +6,7 @@ import {Observable} from "rxjs";
 })
 export class GeocodingService {
   private apiUrl = 'https://maps.googleapis.com/maps/api/geocode/json';
-  private apiKey = 'AIzaSyCaKbVhcX_22R_pRKDYuNA7vox-PtGaDkI';
+  private apiKey = 'AIzaSyDHUEW0CyHkIUG0C5-dCqms-_utGzMuwMQ';
 
   constructor(private http: HttpClient) { }
 
