@@ -7,6 +7,7 @@ import {CarsForMap} from "../../interfaces/cars-for-map";
 import {Coordinates} from "../../interfaces/Coordinates";
 import {GeocodingService} from "../../services/geocoding.service";
 import {flatMap} from "rxjs";
+import {Order} from "../../interfaces/order";
 
 @Component({
   selector: 'app-map-car',
@@ -14,8 +15,7 @@ import {flatMap} from "rxjs";
   styleUrls: ['./map-car.component.scss']
 })
 export class MapCarComponent implements OnInit {
-  constructor(private maps: MapService,
-              private geocoding: GeocodingService) {
+  constructor(private maps: MapService){
 
   }
 
@@ -31,7 +31,7 @@ export class MapCarComponent implements OnInit {
   hours: number = 0;
   isTimerRunning: boolean = false;
 
-
+  order: Order = new Order();
 
   latitude: number = -33.867;
   longitude:number = 151.206;
@@ -55,27 +55,26 @@ export class MapCarComponent implements OnInit {
     url: '/assets/images/bmwe60.png',
     scaledSize: new google.maps.Size(150, 60) // Set your desired height and width here
   };
-
+  public geocoding!: google.maps.Geocoder;
   ngOnInit() {
-    this.maps.showCarsForMap().subscribe((res)=>{
+    // Initialize the geocoding object
+    this.geocoding = new google.maps.Geocoder();
 
+    this.maps.showCarsForMap().subscribe((res) => {
       console.log(res);
       this.cars = res;
-      for(const car of res){
-        this.geocoding.getAddressCoordinates(car.address).subscribe(
-            (geocodedData: any) => {
-              if (geocodedData.status === 'OK') {
-                const location = geocodedData.results[0].geometry.location;
-                const coordinate = {
-                  latitude: location.lat,
-                  longitude: location.lng
-                };
-                this.coordinates.push(coordinate);
-              }
-            })
+      for (const car of res) {
+        this.geocoding.geocode({ address: car.address }, (results, status) => {
+          if (status === google.maps.GeocoderStatus.OK && results) {
+            const coordinate = {
+              latitude: results[0].geometry.location.lat(),
+              longitude: results[0].geometry.location.lng(),
+            };
+            this.coordinates.push(coordinate);
+          }
+        });
       }
-      console.log(this.coordinates);
-    })
+    });
     this.getLocation();
   }
   getLocation(){
@@ -98,9 +97,8 @@ export class MapCarComponent implements OnInit {
     if (this.infoWindow != undefined) this.infoWindow.open(marker);
   }
 
-  startTimer(carId: string) {
+  startTimer() {
     this.check = !this.check;
-    this.changeStatusCar(carId);
     if (!this.isTimerRunning) {
       this.isTimerRunning = true;
       this.timer = setInterval(() => {
@@ -116,6 +114,7 @@ export class MapCarComponent implements OnInit {
     if (this.isTimerRunning) {
       clearInterval(this.timer);
       this.isTimerRunning = false;
+      this.count = 0;
     }
   }
   updateTimerValues() {
@@ -125,6 +124,20 @@ export class MapCarComponent implements OnInit {
   }
 
   changeStatusCar(carId: string){
-    this.maps.changeStatus(carId);
+    this.maps.changeStatus(carId).subscribe((res)=>{
+      console.log(res.message);
+    })
+  }
+
+  createOrder(carId: string, promocode: string){
+    this.maps.createOrder(carId,promocode).subscribe((res)=>{
+      console.log(res.message);
+    })
+  }
+
+  createCartItem(carId: string, price: number){
+    this.maps.createCartItem(carId,price).subscribe((res)=>{
+      console.log(res.message);
+    })
   }
 }
