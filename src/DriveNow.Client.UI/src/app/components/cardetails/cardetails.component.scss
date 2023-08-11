@@ -21,9 +21,9 @@
 }
 
  .card {
-   width: 97%;
-   height: 400px;
-   margin: 20px;
+   width: 96%;
+   height: 100%;
+   margin: 30px;
    border-radius: 10px;
    overflow: hidden;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -48,10 +48,9 @@
 
  .stars {
    display: flex;
-   justify-content: center;
    grid-gap: 0.125rem;
    gap: 0.125rem;
-   color: rgba(34, 197, 94, 1);
+   color: #00A8A8;
  }
  
  .stars svg {
@@ -67,17 +66,19 @@
  }
  
  .card__content {
+  top: 0;
+  margin-left: 50%;
    position: relative;
    bottom: 0;
-   left: 0;
-   width: 100%;
+   width: 50%;
+   height: 50%;
    padding: 20px;
    background-color: #fff;
    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
  }
  
  .card__title {
-   font-size: 24px;
+   font-size: 28px;
    font-weight: bold;
    margin-bottom: 10px;
  }
@@ -104,47 +105,80 @@
  }
  
  .card__image {
-   height: 400px;
-   width: 300px;
+  left: 5%;
+  top: 5%;
+  width: 40%;
+  height: 70%;
    background-color: #000;
  }
 
  .carlisting-description {
   max-width: 100%;
-  margin: 0px auto;
   font-weight: 400;
   color: #000;
   display: block;
-  text-align: center;
   padding-top: 5px;
   font-size: 1em;
+  margin-top: 5%;
 }
 
-.table-row {
-  font-size: 18px;
+.carlisting-table {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-gap: 3%;
+}
+
+.carlisting-description-text {
+  font-size: 20px;
+  margin-right: 5px;
 }
 
 .carlisting-table-brand {
-  width: 8%;
+  width: 20px;
   margin-right: 5px;
 }
 .carlisting-table-type {
-  width: 6%;
+  width: 20px;
   margin-right: 5px;
 }
 .carlisting-table-year {
-  width: 5%;
+  width: 20px;
   margin-right: 5px;
 }
 .carlisting-table-seats {
-  width: 10%;
+  width: 20px;
   margin-right: 5px;
 }
 .carlisting-table-fuel {
-  width: 3%;
+  width: 20px;
   margin-right: 5px;
 }
 .carlisting-table-transmission{
-  width: 4%;
+  width: 20px;
+  margin-right: 5px;
+}
+.carlisting-table-doors {
+  width: 20px;
+  margin-right: 5px;
+}
+.carlisting-table-wheel {
+  width: 20px;
+  margin-right: 5px;
+}
+.carlisting-table-consumption {
+  width: 20px;
+  margin-right: 5px;
+}
+.carlisting-table-trunk {
+  width: 20px;
+  margin-right: 5px;
+}
+.carlisting-table-pinion {
+  width: 20px;
+  margin-right: 5px;
+}
+.carlisting-table-sound {
+  width: 20px;
   margin-right: 5px;
 }
