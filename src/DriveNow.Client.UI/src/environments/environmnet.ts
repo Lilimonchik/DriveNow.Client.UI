@@ -1,6 +1,6 @@
 export const environment = {
     prodution: false,
-    authApi: "http://localhost:5205/",
-    tokenWhiteListedDomains: "localhost:5205",
+    authApi: "https://drive-now-backend.azurewebsites.net/",
+    tokenWhiteListedDomains: "drive-now-backend.azurewebsites.net",
     check: true,
 }
