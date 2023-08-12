@@ -13,7 +13,9 @@
   display: flex;
 }
 .content .content-main .log-in {
-  width: 30%;
+  width: 80%;
+  min-width: 250px;
+  max-width: 450px;
   margin: auto;
   height: auto;
   display: flex;
@@ -56,8 +58,13 @@
   padding-left: 10px;
   font-size: 16px;
   border: 1px solid var(--control-jnt-control-border-color, #D0D0D0);
-  background: url("/assets/images/img_3.png") no-repeat scroll 7px 7px;
   padding-left: 40px;
+}
+.content .content-main .log-in .log-in-form .input-field .input-email-or-phone {
+  background: url("/assets/images/img_3.png") no-repeat scroll 7px 7px;
+}
+.content .content-main .log-in .log-in-form .input-field .input-password {
+  background: url("/assets/images/Group.png") no-repeat scroll 7px 7px;
 }
 .content .content-main .log-in .log-in-form .input-field input:hover {
   border: 1px solid black;
@@ -79,23 +86,14 @@
   border-radius: 10px;
   padding: 5px;
   color: white;
-  font-size: 20px;
+  font-size: 23px;
+  height: 40px;
 }
 .content .content-main .log-in .log-in-form .google-input {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 10px;
-}
-.content .content-main .log-in .log-in-form .google-input .google {
-  border-radius: 40px;
-  border: 1px solid var(--schemas-jnt-primary-color, #05a8a9);
-  width: 80%;
-  height: 60px;
-  background: url("/assets/images/img_4.png") no-repeat scroll 7px 4px;
-  padding-left: 20px;
-  color: #161E21;
-  font-size: 18px;
 }
 .content .content-main .log-in .log-in-form .account {
   color: var(--text-jnt-primary-text-light-color, #828282);
@@ -111,15 +109,19 @@
 }
 .content .content-main .log-in .log-in-form .button-sign-up {
   width: 80%;
-  padding: 5px;
   border: 1px solid var(--schemas-jnt-primary-color, #05a8a9);
   background: white;
-  border-radius: 40px;
+  border-radius: 10px;
   display: flex;
   margin: auto;
   justify-content: center;
   font-size: 18px;
   color: #05a8a9;
+  height: 40px;
+}
+.content .content-main .log-in .log-in-form .button-sign-up .sign-up {
+  display: flex;
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=login.component.css.map */

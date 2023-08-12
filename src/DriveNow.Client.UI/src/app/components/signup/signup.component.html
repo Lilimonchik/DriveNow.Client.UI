@@ -1,35 +1,55 @@
 <div class="content">
     <div class="content-main">
-        <div class="log-in">
-            <span class="span-log-in">Log In</span>
-            <form class="log-in-form">
-                    <!--[formGroup]="loginForm"
-                    (ngSubmit)="login()"-->
+        <div class="sign-up">
+            <span class="span-sign-up">Sing Up</span>
+            <form
+                    class="sign-up-form"
+            >
                 <div class="input-field">
                     <input
+                            class="input-first-name"
                             type="text"
-                            formControlName="emailOrNumber"
-                            placeholder="Username or email">
+                            formControlName="firstName"
+                            placeholder="Firstname">
                 </div>
                 <div class="input-field">
                     <input
+                            class="input-second-name"
+                            type="text"
+                            formControlName="secondName"
+                            placeholder="Lastname">
+                </div>
+                <div class="input-field">
+                    <input
+                            class="input-number-or-email"
+                            type="text"
+                            formControlName="numberOrEmail"
+                            placeholder="Number or Email">
+                </div>
+                <div class="input-field">
+                    <input
+                            class="input-password"
                             type="password"
                             formControlName="password"
                             placeholder="Password">
                 </div>
+                <div class="input-field">
+                    <input
+                            class="input-confirm-password"
+                            type="password"
+                            formControlName="password"
+                            placeholder="Confirm password">
+                </div>
                 <div class="button-submit">
-                    <button type="submit" class="submit"> Log In</button>
+                    <button type="submit" class="submit" >Sign Up</button>
                 </div>
                 <hr class="line">
                 <div class="google-input">
-                    <input
-                            type="button"
-                            class="google"
-                            value="Google"
-                    >
+                    <asl-google-signin-button type="standard" size="medium">
+                    </asl-google-signin-button>
                 </div>
                 <span class="account">Have no account yet?</span>
-                <button class="button-sign-up"><span>Sign Up</span></button>
+                <button class="button-log-in" routerLink="/login"><span class="log-in">Log In</span></button>
             </form>
         </div>
     </div>
