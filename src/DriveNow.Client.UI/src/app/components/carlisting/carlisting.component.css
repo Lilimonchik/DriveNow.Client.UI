@@ -23,7 +23,7 @@
   }
 }
 .carlisting-card {
-  height: 254px;
+  height: 370px;
   background: radial-gradient(circle, rgba(31, 46, 208, 0.8576680672) 0%, rgba(0, 168, 168, 0.8604691877) 100%);
   border: none;
   border-radius: 10px;
@@ -35,17 +35,13 @@
 
 .carlisting-description {
   max-width: 100%;
+  margin: 0px auto;
   font-weight: 400;
   color: white;
   display: block;
   text-align: center;
   padding-top: 5px;
   font-size: 1em;
-}
-
-.carlisting-table-image {
-  height: 15%;
-  width: 15%;
 }
 
 .carlisting-img {
@@ -63,7 +59,11 @@
   text-align: center;
   display: block;
   padding-top: 2%;
-  font-size: 1.3em;
+  font-size: 1.6em;
+}
+
+.table-row {
+  font-size: 18px;
 }
 
 .carlisting-button {
@@ -81,6 +81,48 @@
 .carlisting-button:hover {
   background: #212121;
   color: #ffffff;
+}
+
+.carlisting-table {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(79px, 1fr));
+  grid-gap: 1%;
+}
+
+.carlisting-description-text {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.carlisting-table-brand {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.carlisting-table-type {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.carlisting-table-year {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.carlisting-table-seats {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.carlisting-table-fuel {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.carlisting-table-transmission {
+  width: 20px;
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=carlisting.component.css.map */

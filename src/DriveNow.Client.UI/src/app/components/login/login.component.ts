@@ -19,10 +19,7 @@ export class LoginComponent implements OnInit{
               ) {
   }
 
-  loginForm: FormGroup = new FormGroup({
-    emailOrNumber: new FormControl('',[Validators.required, Validators.email]),
-    password: new FormControl('',[Validators.required]),
-  });
+  loginForm!: FormGroup;
   socialUser!: SocialUser;
   ngOnInit() {
     this.google.authState.subscribe(res=>{
@@ -32,6 +29,10 @@ export class LoginComponent implements OnInit{
         this.router.navigate(['/']);
       })
     })
+    this.loginForm = new FormGroup({
+      emailOrNumber: new FormControl('',[Validators.required, Validators.email]),
+      password: new FormControl('',[Validators.required]),
+    });
   }
 
   login(){
