@@ -180,3 +180,31 @@
   width: 20px;
   margin-right: 5px;
 }
+
+/*Dropdown*/
+.cardetails-car-info-tabs {
+  font-size: 20px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#cardetails-menu {
+  transition: transform 0.3s;
+  transform-origin: top;
+}
+
+#cardetails-menu {
+  transition: transform 0.3s;
+  transform-origin: top;
+}
+
+#cardetails-menu {
+  transition: transform 0.3s;
+  transform-origin: top;
+}
+
+input:not(:checked) ~ #cardetails-menu {
+  transform: scaleY(0);
+}
