@@ -17,6 +17,8 @@ import {environment} from "../environments/environmnet";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { MapCarComponent } from './components/map-car/map-car.component';
 import {GoogleMapsModule} from "@angular/google-maps";
+import { ProfileComponent } from './components/profile/profile.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import {GoogleMapsModule} from "@angular/google-maps";
     FooterComponent,
     CarlistingComponent,
     CardetailsComponent,
-    MapCarComponent
+    MapCarComponent,
+    ProfileComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

@@ -104,10 +104,14 @@
  }
  
  .card__image {
-  left: 5%;
+  left: 2%;
   top: 5%;
-  width: 40%;
-  height: 130%;
+  width: 48%;
+  height: 70%;
+ }
+
+ .cardetails-car-photo {
+  min-height: 100%;
  }
 
  .carlisting-description {
@@ -184,6 +188,7 @@
 /*Dropdown*/
 .cardetails-car-info-tabs {
   font-size: 20px;
+  margin-left: 5%;
 }
 
 #menu-toggle {

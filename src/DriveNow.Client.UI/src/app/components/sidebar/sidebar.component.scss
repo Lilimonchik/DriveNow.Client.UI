@@ -1,0 +1,61 @@
+.sidebar {
+	position: fixed;
+	top: 0px;
+	bottom: 0;
+	left: 0;
+	width: 260px;
+	display: block;
+	z-index: 1;
+	color: #ffffff;
+	font-weight: 200;
+	background: rgb(30, 32, 162);
+	background: linear-gradient(0deg, rgba(30, 32, 162, 1) 0%, rgba(1, 150, 246, 1) 100%);
+	background-size: cover;
+	background-position: center center;
+	box-shadow: 6px 1px 20px rgba(69, 65, 78, 0.1);
+}
+
+.dashboard {
+	font-size: 30px;
+	color: #fff;
+	margin: 20px;
+	margin-top: 90px;
+	transition: transform 500ms ease;
+}
+
+.dashboard:hover {
+	transform: scale(1.1) translateX(5px);
+}
+
+.watchlist {
+	font-size: 30px;
+	color: #fff;
+	margin: 20px;
+	transition: transform 500ms ease;
+}
+
+.watchlist:hover {
+	transform: scale(1.1) translateX(5px);
+}
+
+.cryptocurrency {
+	font-size: 30px;
+	color: #fff;
+	margin: 20px;
+	transition: transform 500ms ease;
+}
+
+.cryptocurrency:hover {
+	transform: scale(1.1) translateX(5px);
+}
+
+.news {
+	font-size: 30px;
+	color: #fff;
+	margin: 20px;
+	transition: transform 500ms ease;
+}
+
+.news:hover {
+	transform: scale(1.1) translateX(5px);
+}
