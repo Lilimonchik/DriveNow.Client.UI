@@ -41,10 +41,11 @@
             .input-field{
                display: flex;
                width: 100%;
-               justify-content: center;
+               flex-direction: column;
                margin-bottom: 10px;
                input{
                   display: flex;
+                  margin: auto;
                   height: 40px;
                   width: 80%;
                   background: #F5F5F5;
@@ -55,6 +56,12 @@
                   border: 1px solid var(--control-jnt-control-border-color, #D0D0D0);
                   //background: url("/assets/images/img_3.png") no-repeat scroll 7px 7px;
                   padding-left:40px;
+               }
+               .dangerous-text{
+                  display: flex;
+                  margin: auto;
+                  color: red;
+                  font-size: 12px;
                }
                .input-number-or-email{
                   background: url("/assets/images/img_3.png") no-repeat scroll 7px 7px;
