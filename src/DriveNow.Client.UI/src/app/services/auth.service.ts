@@ -5,6 +5,7 @@ import {UserFromGoogle} from "../interfaces/user-from-google";
 import {catchError, Observable, tap, throwError} from "rxjs";
 import {Token} from "../interfaces/token";
 import {Router} from "@angular/router";
+import {RegistrationUser} from "../interfaces/registration-user";
 export const ACCESS_TOKEN_KEY = 'bookstore_access_token';
 
 class User {
@@ -33,7 +34,7 @@ export class AuthService {
     )
   }
   public login(User: User){
-      return this.http.post(`${this.apiUrl}SingIn/SingInUser`,User,{responseType: 'text'}).pipe(
+      return this.http.post(`${this.apiUrl}SingInController/SingInUser`,User,{responseType: 'text'}).pipe(
           tap(token=>{
               if(token != null) {
                   localStorage.setItem(ACCESS_TOKEN_KEY, token);
@@ -48,5 +49,9 @@ export class AuthService {
   public logout(): void{
       localStorage.removeItem(ACCESS_TOKEN_KEY);
       this.router.navigate(['/']);
+  }
+
+  public signUp(User: RegistrationUser){
+      return this.http.post(`${this.apiUrl}RegistrationController/Registration`,User);
   }
 }
