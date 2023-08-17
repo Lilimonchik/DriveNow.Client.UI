@@ -1,0 +1,79 @@
+.about-us-header {
+   font-size: 40px;
+}
+ 
+ .about-section {
+   margin: 2% 20%;
+   padding: 180px;
+   text-align: center;
+   background-image: url(/assets/images/img_10-2.png);
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+   color: #fff;
+   .about-us-header-2{
+      font-size: 30px;
+   }
+   .about-us-text {
+      font-size: 20px;
+   }
+ }
+ 
+ .container {
+   padding: 0 16px;
+ }
+ 
+ .container::after, .row::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
+
+ .our-team-header{
+   font-size: 40px;
+   text-align: center;
+}
+
+.column {
+   float: left;
+   width: 50%;
+   margin-bottom: 16px;
+   padding: 0 58px;
+ }
+ 
+ .card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   margin: 8px;
+ }
+
+ .user-photo {
+   margin: 5% auto;
+   width: 40%;
+ }
+ 
+ .title {
+   color: grey;
+ }
+ 
+ .button {
+   border: 1px solid #000;
+   outline: 0;
+   display: inline-block;
+   padding: 8px;
+   color: white;
+   background-color: #000;
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+   &:hover {
+      color: #000;
+      background-color: #fff;
+    }
+ }
+ 
+ @media screen and (max-width: 650px) {
+   .column {
+     width: 100%;
+     display: block;
+   }
+ }

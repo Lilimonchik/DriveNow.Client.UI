@@ -19,6 +19,8 @@ import { MapCarComponent } from './components/map-car/map-car.component';
 import {GoogleMapsModule} from "@angular/google-maps";
 import { ProfileComponent } from './components/profile/profile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     CardetailsComponent,
     MapCarComponent,
     ProfileComponent,
-    SidebarComponent
+    SidebarComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
