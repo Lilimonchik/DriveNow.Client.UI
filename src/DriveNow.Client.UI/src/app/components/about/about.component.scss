@@ -1,10 +1,17 @@
+.content {
+  background-color: #fff;
+  font-size: 40px;
+  padding: 60px 50px;
+  height: 170vh; 
+}
+
 .about-us-header {
    font-size: 40px;
 }
  
  .about-section {
    margin: 2% 20%;
-   padding: 180px;
+   padding: 150px;
    text-align: center;
    background-image: url(/assets/images/img_10-2.png);
    background-size: 100% 100%;
@@ -17,6 +24,10 @@
    .about-us-text {
       font-size: 20px;
    }
+ }
+
+ .row {
+  font-size: 25px;
  }
  
  .container {
@@ -46,10 +57,15 @@
    margin: 8px;
  }
 
- .user-photo {
+ .user-photo-1 {
    margin: 5% auto;
-   width: 40%;
+   width: 42%;
  }
+
+ .user-photo-2 {
+  margin: 5% auto;
+  width: 40%;
+}
  
  .title {
    color: grey;
@@ -71,9 +87,70 @@
     }
  }
  
- @media screen and (max-width: 650px) {
+ @media (max-width: 650px) {
    .column {
+    padding: 0;
      width: 100%;
-     display: block;
    }
+   .content {
+    background-color: #fff;
+    font-size: 40px;
+    padding: 50px;
+    height: 180vh; 
+  }
+  .about-section {
+    margin: 2% 0;
+    padding: 15%;
+    background-image: url(/assets/images/Rectangle-10-2.png);
+  }
+  .hero-banner {
+  margin: 3% 0;
+  align-items: center;
+  height: 10vh;
+  justify-content: center;
+  }
+  .hero-banner__title {
+    font-size: 50px;
+    font-weight: 600;
+    padding: 0 20px;
+  }
+  .hero-banner__image {
+    width: 100%;
+  }
  }
+
+ /*Hello*/
+
+ .hero-banner {
+  margin: 3% 0;
+  align-items: center;
+  display: flex;
+  height: 70vh;
+  position: relative;
+  justify-content: center;
+  z-index: -1;
+}
+
+.hero-banner__title {
+  color: #000;
+  font-size: 100px;
+  font-weight: 700;
+  padding: 0 20px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-banner__stroked-title {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+}
+
+.hero-banner__image {
+  border-radius: 20px;
+  position: fixed;
+  transform: rotate(-15deg);
+  width: 35%;
+  margin: 5%;
+}
