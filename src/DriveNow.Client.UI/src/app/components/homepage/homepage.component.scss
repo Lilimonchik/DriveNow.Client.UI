@@ -1,10 +1,13 @@
-/*.main-container {
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+.main-container {
    max-width: 100%;
-   margin: 0 3%;
 }
 .car-rent {
-   background-color: #161E21;
-   height: 100%;
+   background-image: url(/assets/images/audi-rs6-2.png);
+   background-size: 100% 100%;
+   height: 800px;
    margin-top: 0px;
 }
 
@@ -163,7 +166,7 @@
   background-image: url(/assets/images/ferrari.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  margin: 50px 1%;
+  margin: 50px 0;
 }
 
 .advantages-table {
@@ -220,6 +223,161 @@
       margin: 1%;
       padding: 1%;
    }
+}
+
+.carlisting-card {
+   height: 370px;
+   background: radial-gradient(circle, rgba(31,46,208,0.8576680672268908) 0%, rgba(0,168,168,0.8604691876750701) 100%);
+   border: none;
+   padding-top: 1%;
+   position: relative;
+   font-family: inherit;
+   margin: 5%;
+ }
+ 
+ .carlisting-description {
+   max-width: 100%;
+   margin: 0px auto;
+   font-weight: 400;
+   color: white;
+   display: block;
+   text-align: center;
+   padding-top: 5px;
+   font-size: 1em;
+ }
+ 
+.carlisting-img {
+   width: 85%;
+   height: 50%;
+   background: #e8e8e8;
+   margin: auto;
+   margin-top: 5%;
+ }
+
+ .carlisting-car-name {
+   font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 2%;
+    font-size: 1.6em;
+ }
+
+ .table-row {
+   font-size: 18px;
+ }
+ 
+ .carlisting-button {
+   padding: 3% 10%;
+   display: block;
+   margin: auto;
+   border: none;
+   margin-top: 5%;
+   background: #e8e8e8;
+   color: #111111;
+   font-weight: 600;
+   transition: 300ms;
+   &:hover {
+    background: #212121;
+    color: #ffffff;
+  }
+ }
+
+ .carlisting-table {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(79px, 1fr));
+  grid-gap: 1%;
+}
+
+.carlisting-description-text {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+
+
+.testimonials-header {
+   font-size: 40px;
+   font-weight: 600;
+   text-align: center;
+}
+.testimonials-header-2 {
+   font-size: 25px;
+   font-weight: 400;
+   text-align: center;
+}
+
+figure.snip1390 {
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  background-color: #00A8A8;
+  padding: 30px;
+  background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(#161E21, 0.1) 100%);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip1390 *,
+figure.snip1390 *:before,
+figure.snip1390 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+figure.snip1390 figcaption {
+  width: 100%;
+}
+figure.snip1390 h2,
+figure.snip1390 h4,
+figure.snip1390 blockquote {
+  margin: 0;
+}
+figure.snip1390 h2,
+figure.snip1390 h4 {
+  font-weight: 300;
+}
+figure.snip1390 h2 {
+  color: #ffffff;
+}
+figure.snip1390 h4 {
+  color: #000;
+}
+figure.snip1390 blockquote {
+  font-size: 1em;
+  padding: 45px 20px 40px 50px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  position: relative;
+}
+figure.snip1390 blockquote:before {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 70px;
+  opacity: 0.25;
+  font-style: normal;
+  top: 0px;
+  left: 20px;
+}
+figure.snip1390 .profile {
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  border: solid 5px #161E21;
 }
 
 
@@ -360,7 +518,74 @@
    .table-row-more-info {
       font-size: 18px;
    }
-}*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////
 .content{
    .content-main{
       width: 100%;
