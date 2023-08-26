@@ -4,6 +4,352 @@
 .main-container {
    max-width: 100%;
 }
+
+/* Slider */
+#slider{
+   width:100%;
+   height:700px;
+   position:relative;
+   overflow:hidden;
+   margin-bottom: 5%;
+ }
+ @keyframes load{
+   from{left:-100%;}
+   to{left:0;}
+ }
+ .slides{
+   width:400%;
+   height:100%;
+   position:relative;
+   -webkit-animation:slide 30s infinite;
+   -moz-animation:slide 30s infinite;
+   animation:slide 30s infinite;
+ }
+ .slider{
+   width:25%;
+   height:100%;
+   float:left;
+   position:relative;
+   z-index:1;
+   overflow:hidden;
+ }
+ .slide img{
+   width:100%;
+   height:100%;
+ }
+ .slide img{
+   width:100%;
+   height:100%;
+ }
+ .image{
+   width:100%;
+   height:100%;
+ }
+ .image img{
+   width:100%;
+   height:100%;
+ }
+ 
+ /* Legend */
+ .legend{
+   border:700px solid transparent;
+   border-left:800px solid rgba(#161E21, .7);
+   border-bottom:0;
+   position:absolute;
+   bottom:0;
+ }
+ 
+ /* Contents */
+ .content{
+   margin-top: 2%;
+   width:100%;
+   height:100%;
+   position:absolute;
+   overflow:hidden;
+ }
+ .content-txt{
+   width:400px;
+   height:150px;
+   float:left;
+   position:relative;
+   top:350px;
+   -webkit-animation:content-s 7.5s infinite;
+   -moz-animation:content-s 7.5s infinite;
+   animation:content-s 7.5s infinite;
+ }
+ .content-txt h1{
+   font-family:Arial;
+   text-transform:uppercase;
+   font-size:24px;
+   color:#fff;
+   text-align:left;
+   margin-left:30px;
+   padding-bottom:10px;
+ }
+ .content-txt h2{
+   font-family:arial;
+   font-weight:normal;
+   font-size:14px;
+   font-style:italic;
+   color:#fff;
+   text-align:left;
+   margin-left:30px;
+ }
+ 
+ /* Switch */
+ .switch{
+   width:120px;
+   height:10px;
+   position:absolute;
+   bottom:50px;
+   z-index:99;
+   left:30px;
+ }
+ .switch > ul{
+   list-style:none;
+ }
+ .switch > ul > li{
+   width:10px;
+   height:10px;
+   border-radius:50%;
+   background:#fff;
+   float:left;
+   margin-right:5px;
+   cursor:pointer;
+ }
+ .switch ul{
+   overflow:hidden;
+ }
+ .on{
+   width:100%;
+   height:100%;
+   border-radius:50%;
+   background:#f39c12;
+   position:relative;
+   -webkit-animation:on 30s infinite;
+   -moz-animation:on 30s infinite;
+   animation:on 30s infinite;
+ }
+ 
+ /* Animation */
+ @-webkit-keyframes slide{
+   0%,100%{
+     margin-left:0%;
+   }
+   21%{
+     margin-left:0%;
+   }
+   25%{
+     margin-left:-100%;
+   }
+   46%{
+     margin-left:-100%;
+   }
+   50%{
+     margin-left:-200%;
+   }
+   71%{
+     margin-left:-200%;
+   }
+   75%{
+     margin-left:-300%;
+   }
+   96%{
+     margin-left:-300%;
+   }
+ }
+ @-moz-keyframes slide{
+   0%,100%{
+     margin-left:0%;
+   }
+   21%{
+     margin-left:0%;
+   }
+   25%{
+     margin-left:-100%;
+   }
+   46%{
+     margin-left:-100%;
+   }
+   50%{
+     margin-left:-200%;
+   }
+   71%{
+     margin-left:-200%;
+   }
+   75%{
+     margin-left:-300%;
+   }
+   96%{
+     margin-left:-300%;
+   }
+ }
+ @keyframes slide{
+   0%,100%{
+     margin-left:0%;
+   }
+   21%{
+     margin-left:0%;
+   }
+   25%{
+     margin-left:-100%;
+   }
+   46%{
+     margin-left:-100%;
+   }
+   50%{
+     margin-left:-200%;
+   }
+   71%{
+     margin-left:-200%;
+   }
+   75%{
+     margin-left:-300%;
+   }
+   96%{
+     margin-left:-300%;
+   }
+ }
+ 
+ @-webkit-keyframes content-s{
+   0%{left:-420px;}
+   10%{left:0px;}
+   30%{left:0px;}
+   40%{left:0px;}
+   50%{left:0px;}
+   60%{left:0px;}
+   70%{left:0;}
+   80%{left:-420px;}
+   90%{left:-420px;}
+   100%{left:-420px;}
+ }
+ @-moz-keyframes content-s{
+   0%{left:-420px;}
+   10%{left:0px;}
+   30%{left:0px;}
+   40%{left:0px;}
+   50%{left:0px;}
+   60%{left:0px;}
+   70%{left:0;}
+   80%{left:-420px;}
+   90%{left:-420px;}
+   100%{left:-420px;}
+ }
+ @keyframes content-s{
+   0%{left:-420px;}
+   10%{left:20px;}
+   15%{left:0px;}
+   30%{left:0px;}
+   40%{left:0px;}
+   50%{left:0px;}
+   60%{left:0px;}
+   70%{left:0;}
+   80%{left:-420px;}
+   90%{left:-420px;}
+   100%{left:-420px;}
+ }
+ 
+ @-webkit-keyframes on{
+   0%,100%{
+     margin-left:0%;
+   }
+   21%{
+     margin-left:0%;
+   }
+   25%{
+     margin-left:15px;
+   }
+   46%{
+     margin-left:15px;
+   }
+   50%{
+     margin-left:30px;
+   }
+   71%{
+     margin-left:30px;
+   }
+   75%{
+     margin-left:45px;
+   }
+   96%{
+     margin-left:45px;
+   }
+ }
+ 
+ @-moz-keyframes on{
+   0%,100%{
+     margin-left:0%;
+   }
+   21%{
+     margin-left:0%;
+   }
+   25%{
+     margin-left:15px;
+   }
+   46%{
+     margin-left:15px;
+   }
+   50%{
+     margin-left:30px;
+   }
+   71%{
+     margin-left:30px;
+   }
+   75%{
+     margin-left:45px;
+   }
+   96%{
+     margin-left:45px;
+   }
+ }
+ 
+ @keyframes on{
+   0%,100%{
+     margin-left:0%;
+   }
+   21%{
+     margin-left:0%;
+   }
+   25%{
+     margin-left:15px;
+   }
+   46%{
+     margin-left:15px;
+   }
+   50%{
+     margin-left:30px;
+   }
+   71%{
+     margin-left:30px;
+   }
+   75%{
+     margin-left:45px;
+   }
+   96%{
+     margin-left:45px;
+   }
+ }
+
+ .car-rent-btn {
+   margin: 0 auto;
+}
+
+.car-rent-button {
+   color: azure;
+   font-size: 25px;
+   width: 35%;
+   height: 50px;
+   background-color: #00A8A8;
+   transition: 0.3s;
+   margin: 20px;
+   margin-left: 8%;
+   &:hover {
+      background-color: #8882f8;
+      transform: scale(1.1);
+   }
+}
+
+/*
 .car-rent {
    background-image: url(/assets/images/audi-rs6-2.png);
    background-size: 100% 100%;
@@ -20,6 +366,7 @@
 }
 
 .car-rent-header {
+   padding-top: 10%;
    font-family: Genos;
    font-size: 100px;
    font-weight: 700;
@@ -117,7 +464,9 @@
       }
    }
 }
+*/
 
+/*Welcome*/
 .welcome {
    max-width: 100%;
 }
@@ -135,11 +484,37 @@
    font-size: 23px;
 }
 
+.welcome-content{
+   margin: 0 5%;
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+   grid-gap: 5%;
+}
+
+.welcome-card{
+   margin: 5%;
+   padding: 10%;
+   text-align: center;
+   box-shadow: -9px 9px 18px #5a5a5a,
+              9px -9px 18px #ffffff;
+}
+
+.welcome-card-header{
+   font-size: 30px;
+   margin: 5%;
+}
+
 .welcome-table {
    margin: 10px auto;
    text-align: center;
    font-size: 17px;
    border-spacing: 20px 15px;
+}
+
+@media (max-width: 702px) {
+   .welcome {
+      margin-bottom: 25%;
+   }
 }
 
 @media (max-width: 450px) {
@@ -162,11 +537,24 @@
    max-width: 100%;
 }
 
+.advantages-card {
+   height: 370px;
+   background-color: rgb(223, 219, 219);
+   border: none;
+   padding-top: 1%;
+   position: relative;
+   font-family: inherit;
+   margin: 5%;
+ }
+
 .advantages-content {
-  background-image: url(/assets/images/ferrari.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  margin: 50px 0;
+   background-image: url(/assets/images/ferrari.png);
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   margin: 50px 0;
 }
 
 .advantages-table {
@@ -189,7 +577,7 @@
       background-image: url(/assets/images/bugatti.png);
       background-size: 100% 100%;
       background-repeat: no-repeat;
-      margin: 50px 1%;
+      margin: 50px 0;
     }
 
     .advantages-table {
@@ -206,7 +594,7 @@
       background-image: url(/assets/images/hellcat.png);
       background-size: 100% 100%;
       background-repeat: no-repeat;
-      margin: 50px 1%;
+      margin: 50px 0;
     }
 
     .advantages-table {
@@ -223,45 +611,7 @@
       margin: 1%;
       padding: 1%;
    }
-}
-
-.carlisting-card {
-   height: 370px;
-   background: radial-gradient(circle, rgba(31,46,208,0.8576680672268908) 0%, rgba(0,168,168,0.8604691876750701) 100%);
-   border: none;
-   padding-top: 1%;
-   position: relative;
-   font-family: inherit;
-   margin: 5%;
- }
- 
- .carlisting-description {
-   max-width: 100%;
-   margin: 0px auto;
-   font-weight: 400;
-   color: white;
-   display: block;
-   text-align: center;
-   padding-top: 5px;
-   font-size: 1em;
- }
- 
-.carlisting-img {
-   width: 85%;
-   height: 50%;
-   background: #e8e8e8;
-   margin: auto;
-   margin-top: 5%;
- }
-
- .carlisting-car-name {
-   font-weight: 600;
-    color: white;
-    text-align: center;
-    display: block;
-    padding-top: 2%;
-    font-size: 1.6em;
- }
+} 
 
  .table-row {
    font-size: 18px;
@@ -296,6 +646,14 @@
 }
 
 
+/*Testimonials*/
+
+.testimotionals-cards{
+   margin: 2%;
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+   grid-gap: 1%;
+}
 
 .testimonials-header {
    font-size: 40px;
@@ -381,10 +739,14 @@ figure.snip1390 .profile {
 }
 
 
-
+/*Numbers*/
 .numbers-content {
    color: azure;
-   background-color: #161E21;
+   background-image: url(/assets/images/Rectangle-25-2.png);
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
    margin: 50px 0px;
 }
 
@@ -446,9 +808,22 @@ figure.snip1390 .profile {
    margin: 4%;
 }
 
-.popular-table {
-   border-collapse: collapse;
-   width: 100%;
+.popular-container{
+   margin: 2%;
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+   grid-gap: 3%;
+}
+
+.popular-card{
+   height: 23rem;
+   background: lightgrey;
+   background-color: #ddd;
+   border-top-left-radius: 2rem;
+   border-bottom-right-radius: 2rem;
+   padding: 1rem;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   transition: 0.5s ease-in-out;
 }
 
 .popular-text {
@@ -459,6 +834,19 @@ figure.snip1390 .profile {
    letter-spacing: 0em;
    text-align: center;
    margin-bottom: 3%;
+}
+
+.popular-img{
+   width: 90%;
+}
+
+.popular-car-name{
+   font-size: 23px;
+   margin: 2% 0;
+}
+
+.popular-car-desc{
+   font-size: 17px;
 }
 
 .popular-btn {
@@ -481,42 +869,40 @@ figure.snip1390 .profile {
 }
 
 .popular-car-photo {
-   width: 80%;
+   width: 100%;
    margin: 5%;
+   cursor: pointer;
+   transition: 0.3s;
+   &:hover{
+      scale: 1.1;
+   }
 }
 
-.table-row-car-name {
-   font-size: 25px;
+.popular-car-rent-btn{
+   margin-top: 3%;
 }
 
-.table-row-car-desc {
+.popular-car-rent-button {
    font-size: 18px;
+   width: 40%;
+   height: 35px;;
+   background-color: #161E21;
+   color: #fff;
+   transition: 0.3s;
+   margin: 10px;
+   margin-left: 30%;
+   transition: 0.3s;
+   &:hover {
+      background-color: #fff;
+      color: #161E21;
+   }
 }
 
-.table-row-more-info {
-   font-size: 20px;
-}
 
 @media (max-width: 768px) {
-   .popular {
-      margin: 2%;
-   }
-
    .popular-text {
       margin-bottom: 3%;
       font-size: 32px;
-   }
-
-   .table-row-car-name {
-      font-size: 20px;
-   }
-
-   .table-row-car-desc {
-      font-size: 16px;
-   }
-
-   .table-row-more-info {
-      font-size: 18px;
    }
 }
 
