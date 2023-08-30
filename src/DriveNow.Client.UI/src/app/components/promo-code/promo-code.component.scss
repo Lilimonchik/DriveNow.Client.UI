@@ -1,0 +1,92 @@
+.content{
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  height: 100%;
+  .content-left{
+    width: 25%;
+  }
+  .content-right {
+    width: 75%;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 10px 20px 0px rgba(194, 194, 194, 0.16), 0px 0px 30px 0px rgba(170, 170, 170, 0.16);
+    padding: 20px 24px;
+    .first-div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      .promo-codes{
+        width: 100%;
+        height: 100%;
+        .content-promo-codes{
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          height: 25%;
+          background: #FFFFFF;
+          border: 1px solid #e9e9e9;
+          border-radius: 10px;
+          align-items: center;
+          span{
+            margin: auto;
+            font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+            font-size: 22px;
+          }
+        }
+        .content-promo-codes:hover{
+          border: 1px solid black;
+        }
+      }
+      .main-button {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+        height: 25%;
+        background: #FFFFFF;
+        border: 1px solid #e9e9e9;
+        border-radius: 10px;
+        align-items: center;
+      }
+      .main-button:hover {
+        border: 1px solid black;
+        color: red;
+      }
+    }
+    .second-div{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      .add{
+        font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+        font-size: 25px;
+        font-weight: 800;
+        padding: 2%;
+      }
+      .promo-code-form{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        .field{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          mat-form-field{
+            margin-left: 2%;
+          }
+        }
+        .action{
+          display: flex;
+          width: 100%;
+          padding: 2%;
+          justify-content: center;
+          button{
+            margin-left: 2%;
+          }
+        }
+      }
+    }
+  }
+}
