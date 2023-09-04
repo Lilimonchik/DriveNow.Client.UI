@@ -4,7 +4,6 @@ import {AuthService} from "../../services/auth.service";
 import {UserInformation} from "../../interfaces/user-information";
 import {Langueges} from "../../interfaces/Enums/Langueges";
 import {Sexs} from "../../interfaces/Enums/Sexs";
-import {atLeastOne} from "../../interfaces/custom-validations";
 
 @Component({
   selector: 'app-settings-user',

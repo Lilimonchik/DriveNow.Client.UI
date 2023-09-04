@@ -19,35 +19,77 @@ a{
    top: 0;
    width: 80px;
    }
-   
+
    .border-shape::before {
-   background: #00A8A8 none repeat scroll 0 0;
-   bottom: 0;
-   content: "";
-   height: 1px;
-   left: 80px;
-   margin: 0 auto;
-   position: absolute;
-   text-align: center;
-   top: 1px;
-   width: 100px;
-   }
-   
-   .border-shape::after {
-   background: #00A8A8 none repeat scroll 0 0;
-   bottom: 0;
-   content: "";
-   height: 1px;
-   margin: 0 auto;
-   position: absolute;
-   right: 80px;
-   text-align: center;
-   top: 1px;
-   width: 100px;
-   }
+      background: #00A8A8 none repeat scroll 0 0;
+      bottom: 0;
+      content: "";
+      height: 1px;
+      left: 80px;
+      margin: 0 auto;
+      position: absolute;
+      text-align: center;
+      top: 1px;
+      width: 100px;
+      }
+      
+      .border-shape::after {
+      background: #00A8A8 none repeat scroll 0 0;
+      bottom: 0;
+      content: "";
+      height: 1px;
+      margin: 0 auto;
+      position: absolute;
+      right: 80px;
+      text-align: center;
+      top: 1px;
+      width: 100px;
+      }
+
+   @media (max-width:500px){
+      .border-shape {
+         background: #00A8A8 none repeat scroll 0 0;
+         color: #fff;
+         display: block;
+         height: 3px;
+         left: 0;
+         margin: 10px auto;
+         position: relative;
+         right: 0;
+         text-align: center;
+         top: 0;
+         width: 40px;
+         }
+
+         .border-shape::before {
+            background: #00A8A8 none repeat scroll 0 0;
+            bottom: 0;
+            content: "";
+            height: 1px;
+            left: 40px;
+            margin: 0 auto;
+            position: absolute;
+            text-align: center;
+            top: 1px;
+            width: 50px;
+            }      
+            
+            .border-shape::after {
+            background: #00A8A8 none repeat scroll 0 0;
+            bottom: 0;
+            content: "";
+            height: 1px;
+            margin: 0 auto;
+            position: absolute;
+            right: 40px;
+            text-align: center;
+            top: 1px;
+            width: 50px;
+            }
+      }
 
 footer{
-   font-size: 18px;
+   font-size: 23px;
    width:100%;
    background-color:#161E21;
    color:#fff;
@@ -99,7 +141,7 @@ footer{
    }
    
    .bottom_content a{
-   margin:0 20px;
+   margin:0 50px;
    color:rgba(255,255,255,0.7);
    transition:0.3s;
    }
@@ -110,6 +152,14 @@ footer{
 
    .socials{
       text-align: center;
+   }
+
+   .bottom_content .fa{
+      font-size: 30px;
+   }
+
+   .bottom-header {
+      font-size: 20px;
    }
    
    
@@ -140,7 +190,7 @@ footer{
    }
    footer .bottom_content section a{
    padding:1rem;
-   font-size:12px;
+   font-size:20px;
    margin:0 5px;
    display:inline-block;
    }
