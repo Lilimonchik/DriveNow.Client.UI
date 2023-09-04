@@ -22,7 +22,6 @@
   flex-direction: column;
   background: white;
   padding: 15px;
-  border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .content .content-main .sign-up .span-sign-up {
@@ -54,10 +53,9 @@
   height: 40px;
   width: 80%;
   background: #F5F5F5;
-  border-radius: 10px;
   padding: 9px;
   padding-left: 10px;
-  font-size: 16px;
+  font-size: 15px;
   border: 1px solid var(--control-jnt-control-border-color, #D0D0D0);
   padding-left: 40px;
 }
@@ -91,13 +89,18 @@
   justify-content: center;
 }
 .content .content-main .sign-up .sign-up-form .button-submit .submit {
+  border: 1px solid var(--schemas-jnt-primary-color, #05a8a9);
   width: 85%;
-  background: #05a8a9;
-  border-radius: 10px;
+  background: #00A8A8;
   padding: 5px;
   color: white;
-  font-size: 23px;
+  font-size: 20px;
   height: 40px;
+  transition: 0.3s;
+}
+.content .content-main .sign-up .sign-up-form .button-submit .submit:hover {
+  color: #00A8A8;
+  background-color: #fff;
 }
 .content .content-main .sign-up .sign-up-form .google-input {
   width: 100%;
@@ -111,7 +114,7 @@
   width: 100%;
   justify-content: center;
   font-family: Open Sans;
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -121,17 +124,21 @@
   width: 80%;
   border: 1px solid var(--schemas-jnt-primary-color, #05a8a9);
   background: white;
-  border-radius: 10px;
   display: flex;
   margin: auto;
   justify-content: center;
-  font-size: 18px;
-  color: #05a8a9;
+  font-size: 20px;
+  color: #00A8A8;
   height: 40px;
+  transition: 0.3s;
+}
+.content .content-main .sign-up .sign-up-form .button-log-in:hover {
+  color: #fff;
+  background-color: #00A8A8;
 }
 .content .content-main .sign-up .sign-up-form .button-log-in .log-in {
   display: flex;
-  margin-top: 10px;
+  margin-top: 2.5%;
 }
 
 /*# sourceMappingURL=signup.component.css.map */

@@ -4,6 +4,7 @@ import {GoogleLoginProvider, SocialAuthService, SocialUser} from "@abacritt/angu
 import {Route, Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {NumberOrEmailValidator, validate} from "../../interfaces/custom-validations";
+import {LiqPayService} from "../../services/liqpay.service";
 
 @Component({
   selector: 'app-signup',
@@ -15,6 +16,7 @@ export class SignupComponent implements OnInit{
   constructor(private auth: AuthService,
               private router: Router,
               private google: SocialAuthService,
+              private liqpay: LiqPayService
               ) {
   }
 
@@ -39,5 +41,8 @@ export class SignupComponent implements OnInit{
     this.auth.signUp(this.singUpForm.value).subscribe(res=>{
       console.log(res);
     })
+  }
+  initiatePayment(){
+    this.liqpay.initiatePayment();
   }
 }
