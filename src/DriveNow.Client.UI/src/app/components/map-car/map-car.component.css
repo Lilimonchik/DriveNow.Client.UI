@@ -1,79 +1,130 @@
-.main-map .marker {
-  height: 500px;
-  width: 500px;
+/*.main-map{
+  .marker{
+    height: 500px;
+    width: 500px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    .photo {
+      width: 300px;
+      height: auto;
+      padding: 1%;
+      margin-bottom: 10px;
+
+      .main-photo {
+        width: 100%;
+      }
+    }
+
+    .main-info {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .function {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      .rent-button {
+        display: flex;
+        width: 20%;
+        height: auto;
+        font-size: 16px;
+        font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+        border-radius: 5px;
+        background: #05a8a9;
+        color: white;
+
+        .rent {
+          margin: auto;
+        }
+      }
+    }
+  }
+  .content-rent {
+     .photo-rent {
+       width: 300px;
+       height: auto;
+       padding: 1%;
+       margin-bottom: 10px;
+
+       .main-photo {
+         width: 100%;
+       }
+     }
+
+     .main-info-rent {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       font-size: 20px;
+       margin-bottom: 10px;
+     }
+
+     .function-rent {
+       display: flex;
+       width: 80%;
+       justify-content: space-between;
+
+       .rent-button-second {
+         display: flex;
+         width: 20%;
+         height: auto;
+         font-size: 16px;
+         font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+         border-radius: 5px;
+         background: #05a8a9;
+         color: white;
+
+         .rent-second {
+           margin: auto;
+         }
+       }
+     }
+   }
 }
-.main-map .content {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
+*/
+.map {
+  width: 100vw;
+  height: 100vh;
 }
-.main-map .content .photo {
-  width: 300px;
-  height: auto;
-  padding: 1%;
-  margin-bottom: 10px;
-}
-.main-map .content .photo .main-photo {
-  width: 100%;
-}
-.main-map .content .main-info {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.main-map .content .function {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-.main-map .content .function .rent-button {
-  display: flex;
-  width: 20%;
-  height: auto;
-  font-size: 16px;
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+
+.custom-window {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  background: #05a8a9;
-  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px;
 }
-.main-map .content .function .rent-button .rent {
-  margin: auto;
+.custom-window h3 {
+  margin: 0;
+  font-size: 18px;
 }
-.main-map .content-rent .photo-rent {
-  width: 300px;
-  height: auto;
-  padding: 1%;
-  margin-bottom: 10px;
-}
-.main-map .content-rent .photo-rent .main-photo {
+.custom-window img {
   width: 100%;
+  max-height: 150px;
+  margin-top: 10px;
 }
-.main-map .content-rent .main-info-rent {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  margin-bottom: 10px;
+.custom-window p {
+  font-size: 14px;
+  margin-top: 10px;
 }
-.main-map .content-rent .function-rent {
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-}
-.main-map .content-rent .function-rent .rent-button-second {
-  display: flex;
-  width: 20%;
-  height: auto;
-  font-size: 16px;
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
-  border-radius: 5px;
-  background: #05a8a9;
+.custom-window .action {
+  background-color: #FF7A00;
   color: white;
-}
-.main-map .content-rent .function-rent .rent-button-second .rent-second {
-  margin: auto;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=map-car.component.css.map */
