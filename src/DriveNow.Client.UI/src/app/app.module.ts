@@ -21,6 +21,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { ContactComponent } from './components/contact/contact.component';
     FormsModule,
     ReactiveFormsModule,
     GoogleMapsModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    NoopAnimationsModule,
+    MatButtonModule
   ],
   providers: [
     {
