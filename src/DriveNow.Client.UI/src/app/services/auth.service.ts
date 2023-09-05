@@ -6,6 +6,7 @@ import {catchError, Observable, tap, throwError} from "rxjs";
 import {Token} from "../interfaces/token";
 import {Router} from "@angular/router";
 import {RegistrationUser} from "../interfaces/registration-user";
+import {UserInformation} from "../interfaces/user-information";
 export const ACCESS_TOKEN_KEY = 'bookstore_access_token';
 
 class User {
@@ -53,5 +54,9 @@ export class AuthService {
 
   public signUp(User: RegistrationUser){
       return this.http.post(`${this.apiUrl}RegistrationController/Registration`,User);
+  }
+
+  public ShowUserInfo():Observable<UserInformation>{
+      return this.http.get<UserInformation>(``);
   }
 }

@@ -686,6 +686,15 @@
    grid-gap: 2%;
 }
 
+@media (max-width: 450px) {
+   .testimotionals-cards{
+      margin: 5%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+      grid-gap: 2%;
+   }
+}
+
 .testimonials-header {
    font-size: 40px;
    font-weight: 600;
@@ -799,6 +808,7 @@ figure.snip1390 .profile {
 
 .numbers-cards {
   text-align: center;
+  padding: 1%;
 }
 
 .numbers-card {
@@ -841,6 +851,15 @@ figure.snip1390 .profile {
    display: grid;
    grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
    grid-gap: 3%;
+}
+
+@media (max-width: 450px) {
+   .popular-container{
+      margin: 2%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+      grid-gap: 3%;
+   }
 }
 
 .popular-card{
