@@ -9,6 +9,10 @@ import {MapCarComponent} from "./components/map-car/map-car.component";
 import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import {SettingsUserComponent} from "./components/settings-user/settings-user.component";
+import {OrdersComponent} from "./components/orders/orders.component";
+import {PaymentsComponent} from "./components/payments/payments.component";
+import {PromoCodeComponent} from "./components/promo-code/promo-code.component";
 
 const routes: Routes = [
   {path: '', component: HomepageComponent, title: 'Home'},
@@ -20,6 +24,11 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent, title: 'Profile'},
   {path: 'about', component: AboutComponent, title: 'About'},
   {path: 'contact', component: ContactComponent, title: 'Contact'},
+  {path: 'settings',component: SettingsUserComponent,title:'Settings'},
+  {path: 'orders',component: OrdersComponent, title: 'Orders'},
+  {path: 'payments', component: PaymentsComponent, title: 'Payments'},
+  {path: 'promo-code',component: PromoCodeComponent, title: 'Promo-code'},
+
 ];
 
 @NgModule({
