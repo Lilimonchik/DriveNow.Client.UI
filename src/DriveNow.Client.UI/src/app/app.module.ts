@@ -63,6 +63,13 @@ import {CabinetListComponent} from "./components/cabinet-list/cabinet-list.compo
 import {SettingsUserComponent} from "./components/settings-user/settings-user.component";
 import {PromoCodeComponent} from "./components/promo-code/promo-code.component";
 import {PaymentsComponent} from "./components/payments/payments.component";
+import { SettingsAdminComponent } from './components/settings-admin/settings-admin.component';
+import { AdminListComponent } from './components/admin-list/admin-list.component';
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+import { AdminPromocodeComponent } from './components/admin-promocode/admin-promocode.component';
+import { AdminUsersListComponent } from './components/admin-users-list/admin-users-list.component';
+import { AdminCarListComponent } from './components/admin-car-list/admin-car-list.component';
+import { AdminCheckDocumentsComponent } from './components/admin-check-documents/admin-check-documents.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +90,14 @@ import {PaymentsComponent} from "./components/payments/payments.component";
       CabinetListComponent,
       SettingsUserComponent,
       PromoCodeComponent,
-      PaymentsComponent
+      PaymentsComponent,
+      SettingsAdminComponent,
+    AdminListComponent,
+    AdminOrdersComponent,
+    AdminPromocodeComponent,
+    AdminUsersListComponent,
+    AdminCarListComponent,
+    AdminCheckDocumentsComponent
   ],
   imports: [
     BrowserModule,

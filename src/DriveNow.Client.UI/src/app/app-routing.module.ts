@@ -13,6 +13,13 @@ import {SettingsUserComponent} from "./components/settings-user/settings-user.co
 import {OrdersComponent} from "./components/orders/orders.component";
 import {PaymentsComponent} from "./components/payments/payments.component";
 import {PromoCodeComponent} from "./components/promo-code/promo-code.component";
+import { SettingsAdminComponent } from './components/settings-admin/settings-admin.component';
+import { AdminListComponent } from './components/admin-list/admin-list.component';
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+import { AdminPromocodeComponent } from './components/admin-promocode/admin-promocode.component';
+import { AdminUsersListComponent } from './components/admin-users-list/admin-users-list.component';
+import { AdminCarListComponent } from './components/admin-car-list/admin-car-list.component';
+import { AdminCheckDocumentsComponent } from './components/admin-check-documents/admin-check-documents.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent, title: 'Home'},
@@ -28,6 +35,14 @@ const routes: Routes = [
   {path: 'orders',component: OrdersComponent, title: 'Orders'},
   {path: 'payments', component: PaymentsComponent, title: 'Payments'},
   {path: 'promo-code',component: PromoCodeComponent, title: 'Promo-code'},
+  {path: 'settings-admin',component: SettingsAdminComponent, title: 'Settings-admin'},
+  {path: 'admin-list',component: AdminListComponent, title: 'Admin-list'},
+  {path: 'admin-orders',component: AdminOrdersComponent, title: 'Admin-orders'},
+  {path: 'admin-promocode',component: AdminPromocodeComponent, title: 'Admin-promo-code'},
+  {path: 'admin-users-list',component: AdminUsersListComponent, title: 'Admin-users-list'},
+  {path: 'admin-car-list',component: AdminCarListComponent, title: 'Admin-car-list'},
+  {path: 'admin-check-documents',component: AdminCheckDocumentsComponent, title: 'Admin-check-documents'},
+  
 
 ];
 

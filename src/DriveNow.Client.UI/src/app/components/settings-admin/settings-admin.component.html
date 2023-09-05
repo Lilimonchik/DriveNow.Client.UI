@@ -1,0 +1,160 @@
+<div class="content">
+   <div class="content-left">
+       <app-admin-list></app-admin-list>
+   </div>
+   <div class="content-right">
+       <mat-accordion>
+           <mat-expansion-panel>
+               <mat-expansion-panel-header>
+                   <mat-panel-title>
+                       <mat-icon>account_circle</mat-icon>
+                   </mat-panel-title>
+                   <mat-panel-description>
+                       <mat-panel-title>User Data</mat-panel-title>
+                   </mat-panel-description>
+               </mat-expansion-panel-header>
+               <div class="main-user-content" *ngIf="!check_data">
+                   <div class="main-user">
+                       <div class="firstname-div">
+                           <span class="span-first">First name</span>
+                           <span class="firstname-value">{{user.firstName}}</span>
+                       </div>
+                       <div class="secondname-div">
+                           <span class="span-first">Second name</span>
+                           <span class="span-value">{{user.secondName}}</span>
+                       </div>
+                       <div class="birthday-div">
+                           <span class="span-first">Birthday</span>
+                           <span class="span-value">{{user.birthday}}</span>
+                       </div>
+                       <div class="sex-div">
+                           <span class="span-first">Sex</span>
+                           <span class="span-value">{{user.sex}}</span>
+                       </div>
+                       <div class="language-div">
+                           <span class="span-first">Language</span>
+                           <span class="span-value">{{user.language}}</span>
+                       </div>
+                   </div>
+                   <div class="action">
+                       <button mat-raised-button color="warn" (click)="check_data=!check_data">Edit</button>
+                   </div>
+               </div>
+           <form
+           [formGroup]="changeData"
+           (ngSubmit)="changeDataUser()"
+           *ngIf="check_data"
+           class="form"
+           >
+               <span class="change-span">User information</span>
+               <div class="first-field">
+                   <mat-form-field appearance="outline">
+                       <mat-label>FirstName</mat-label>
+                       <input matInput type="text" placeholder="{{user.firstName}}" formControlName="firstName">
+                   </mat-form-field>
+                   <mat-form-field appearance="outline" class="second">
+                       <mat-label>SecondName</mat-label>
+                       <input matInput type="text" placeholder="{{user.secondName}}" formControlName="secondName">
+                   </mat-form-field>
+               </div>
+               <div class="first-field">
+               <mat-form-field appearance="outline">
+                   <mat-label>Birthday</mat-label>
+                   <input matInput type="date" placeholder="{{user.birthday}}" formControlName="birthday">
+               </mat-form-field>
+               </div>
+               <mat-form-field appearance="outline">
+                   <mat-label>Sex</mat-label>
+                   <mat-select placeholder="{{user.sex}}" formControlName="sex">
+                       <mat-option value="{{Sexs.male}}">Male</mat-option>
+                       <mat-option value="{{Sexs.female}}">Female</mat-option>
+                   </mat-select>
+               </mat-form-field>
+               <div class="action">
+                   <button mat-raised-button color="warn" type="submit" (click)="check_data=!check_data">Update Profile</button>
+                   <button mat-button type="reset">Reset</button>
+               </div>
+           </form>
+           </mat-expansion-panel>
+           <mat-expansion-panel>
+               <mat-expansion-panel-header>
+                   <mat-panel-title>
+                       <mat-icon>email</mat-icon>
+                   </mat-panel-title>
+                   <mat-panel-description>
+                       <mat-panel-title>Contact</mat-panel-title>
+                   </mat-panel-description>
+               </mat-expansion-panel-header>
+               <div class="main-contact" *ngIf="!check_contact">
+                   <div class="main">
+                       <div class="first-div">
+                           <span class="span-first">Number</span>
+                           <span class="span-second">{{user.number}}</span>
+                       </div>
+                       <div class="second-div">
+                           <span class="span-first">Email</span>
+                           <span class="span-second">{{user.email}}</span>
+                       </div>
+                   </div>
+                   <div class="action-button">
+                       <button mat-raised-button color="warn" (click)="check_contact=!check_contact">Edit</button>
+                   </div>
+               </div>
+               <div class="form-content" *ngIf="check_contact">
+                   <form
+                   [formGroup]="change_contact"
+                   (ngSubmit)="change_contact_user()"
+                   class="contact-form"
+                   >
+                       <span class="change-contact">Change Contact</span>
+                       <div class="main-field">
+                           <mat-form-field appearance="outline">
+                               <mat-label>Email</mat-label>
+                               <input matInput type="text" placeholder="{{user.email}}" formControlName="email">
+                           </mat-form-field>
+                           <mat-form-field appearance="outline">
+                               <mat-label>Number</mat-label>
+                               <input matInput type="text" placeholder="{{user.number}}" formControlName="number">
+                           </mat-form-field>
+                       </div>
+
+                       <div class="action">
+                           <button mat-raised-button color="warn" type="submit" (click)="check_data=!check_data">Update Profile</button>
+                           <button mat-button type="reset">Reset</button>
+                       </div>
+                   </form>
+               </div>
+           </mat-expansion-panel>
+           <mat-expansion-panel>
+               <mat-expansion-panel-header>
+                   <mat-panel-title>
+                       <mat-icon>lock</mat-icon>
+                   </mat-panel-title>
+                   <mat-panel-description>
+                       <mat-panel-title>Password</mat-panel-title>
+                   </mat-panel-description>
+               </mat-expansion-panel-header>
+           </mat-expansion-panel>
+           <mat-expansion-panel>
+               <mat-expansion-panel-header>
+                   <mat-panel-title>
+                       <mat-icon>assignment_ind</mat-icon>
+                   </mat-panel-title>
+                   <mat-panel-description>
+                       <mat-panel-title>Document</mat-panel-title>
+                   </mat-panel-description>
+               </mat-expansion-panel-header>
+               <div class="content-document">
+                   <div class="field">
+                       <span>Document</span>
+                       <img src="/assets/images/date.png" alt="photo">
+                   </div>
+                   <div class="field">
+                       <span>Status</span>
+                       <span>Ok</span>
+                   </div>
+               </div>
+           </mat-expansion-panel>
+       </mat-accordion>
+   </div>
+</div>
