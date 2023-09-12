@@ -12,7 +12,7 @@
    .cardetails-header {
       font-size: 25px;
       text-align: center;
-      margin: 2% 0;
+      margin: 2% 0; 
    }
 }
 
@@ -21,28 +21,24 @@
 }
 
  .card {
-   width: 96%;
-   height: 100%;
-   margin: 30px;
+   max-width: 95%;
+   height: auto;
+   margin: 4%;
    overflow: hidden;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-   margin-bottom: 4%;
  }
  
  .card__image {
-   position: absolute;
    top: 0;
    left: 0;
-   width: 100%;
+   width: 50%;
    height: 50%;
-   overflow: hidden;
  }
  
  .card__image img {
    width: 100%;
-   height: 50%;
-   object-fit: cover;
+   height: auto;
  }
 
  .stars {
@@ -186,30 +182,185 @@
 }
 
 /*Dropdown*/
-.cardetails-car-info-tabs {
+:root {
+  --contentHeight: 30vh;
+  --sectionWidth: 700px;
+}
+
+section {
+  max-width: var(--sectionWidth);
+  margin: 200px auto 1% auto;
+  width: 97%;
+  color: #000;
+}
+
+summary {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  font-family: "Space Mono", monospace;
+  font-size: 25px;
+  transition: .3s;
+  border-bottom: 2px solid;
+  user-select: none;
+}
+
+details > div {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: 100%;
+  user-select: none;
+  padding: 0 20px;
+  font-family: "Karla", sans-serif;
+  line-height: 1.5;
+}
+
+details > div > img {
+  align-self: flex-start;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+details > div > p {
+  flex: 1;
+}
+
+details[open] > summary {
+   color: #00A8A8;
+}
+
+@media (min-width: 768px) {
+  details[open] > div > p {
+    opacity: 0;
+    animation-name: showContent;
+    animation-duration: 0.6s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  details[open] > div {
+    animation-name: slideDown;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  details[open] > div > img {
+    opacity: 0;
+    height: 100%;
+    margin: 0;
+    animation-name: showImage;
+    animation-duration: 0.3s;
+    animation-delay: 0.15s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: var(--contentHeight);
+    padding: 20px;
+  }
+}
+
+@keyframes showImage {
+  from {
+    opacity: 0;
+    clip-path: inset(50% 0 50% 0);
+    transform: scale(0.4);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.description{
   font-size: 20px;
-  margin-left: 5%;
 }
 
-#menu-toggle {
-  display: none;
+.item-name{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 5%;
 }
 
-#cardetails-menu {
-  transition: transform 0.3s;
-  transform-origin: top;
+.item-value {
+  font-weight: 400;
 }
 
-#cardetails-menu {
-  transition: transform 0.3s;
-  transform-origin: top;
+//Reviews
+.pt--40 {
+  padding-top: 40px !important;
 }
-
-#cardetails-menu {
-  transition: transform 0.3s;
-  transform-origin: top;
+.reviews-stars{
+  font-size: 19px;
+  color: #00A8A8;
 }
-
-input:not(:checked) ~ #cardetails-menu {
-  transform: scaleY(0);
+.edu-comment {
+  display: flex;
+}
+@media only screen and (max-width: 575px) {
+  .edu-comment {
+    flex-direction: column;
+  }
+}
+.edu-comment .thumbnail {
+  min-width: 70px;
+  width: 70px;
+  max-height: 70px;
+  border-radius: 100%;
+  margin-right: 25px;
+}
+.edu-comment .thumbnail img {
+  border-radius: 100%;
+  width: 100%;
+}
+.edu-comment .comment-content .comment-top {
+  display: flex;
+  align-items: center;
+}
+.edu-comment .comment-content .title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+.edu-comment .comment-content .subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  display: block;
+  margin-bottom: 10px;
+  color: #161E21;
+}
+@media only screen and (max-width: 575px) {
+  .edu-comment .comment-content {
+    margin-top: 20px;
+  }
+}
+.edu-comment + .edu-comment {
+  border-top: 1px solid #bbbbbb;
+  padding-top: 30px;
+  margin-top: 30px;
 }
