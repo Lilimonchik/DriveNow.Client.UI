@@ -30,15 +30,22 @@
  }
  
  .card__image {
-   top: 0;
-   left: 0;
-   width: 50%;
-   height: 50%;
- }
+   position: absolute;
+  }
  
  .card__image img {
    width: 100%;
-   height: auto;
+   max-height: 440px;
+ }
+
+ .card__image {
+  left: 2%;
+  top: 4%;
+  width: 48%;
+ }
+
+ @media (min-width: 958px) {
+  
  }
 
  .stars {
@@ -97,17 +104,6 @@
     background-color: #fff;
     color: #000;
    }
- }
- 
- .card__image {
-  left: 2%;
-  top: 5%;
-  width: 48%;
-  height: 70%;
- }
-
- .cardetails-car-photo {
-  min-height: 100%;
  }
 
  .carlisting-description {
