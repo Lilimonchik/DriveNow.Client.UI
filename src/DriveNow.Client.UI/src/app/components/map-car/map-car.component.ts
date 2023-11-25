@@ -56,13 +56,6 @@ export class MapCarComponent implements OnInit {
   ngOnInit() {
     console.log(this.trip);
     this.getLocation();
-    let loader = new Loader({
-      apiKey: 'AIzaSyDfzm6sjJfkjtkTZhDEdNPfKATc0TMKPTM'
-    });
-
-    loader.load().then(() => {
-      console.log("Successful!");
-    });
     const location = {
       lat: this.latitude,
       lng: this.longitude,
