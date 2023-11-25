@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.about-header{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #ffffff;
+  font-size: 110px;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 10%;
+   width:100%;
+   height:500px;
+   opacity:.8;
+   background-color:#00A8A8;
+   background-image:url(/assets/images/Rectangle-25-2.png);
+   background-size:cover;
+   background-position:center;
+}
+.container{
+   width:100%;
+}
+.container h1{
+   font-size:50px
+}
+.about{
+   padding:5% 0;
+   width:100%;
+   height:auto;
+   background-color:#fff;
+}
+.about .left{
+   padding:2% 0;
+   float: left;
+   width:50%;
+   display:inline-block;
+}
+.about .right{
+   width:50%;
+   display:inline-block;
+}
+.about .right img{
+   width:100%
+}
+.about .left h1{
+   text-align:center;
+   color:#00A8A8;
+   margin:0 0 10px 0;
+}
+.about .left hr{
+   width:20%;
+   border-top:2px solid #000;
+   border-bottom:none;
+}
+.about .left p{
+   font-size:1rem;
+   margin:40px auto;
+   width:80%
+}
+
+.mission{
+   padding:5% 0;
+   width:100%;
+   height:auto;
+   background-color:#fff;
+}
+.mission .right{
+   padding:2% 0;
+   width:50%;
+
+   display:inline-block;
+}
+.mission .left{
+   float: left;
+   width:50%;
+
+   display:inline-block;
+}
+.mission .left img{
+   width:100%;
+}
+.mission .right h1{
+   text-align:center;
+   color:#00A8A8;
+   margin:0 0 20px 0;
+}
+.mission .right hr{
+   width:20%;
+   border-top:2px solid #000;
+   border-bottom:none;
+}
+.mission .right p{
+   font-size:1rem;
+   margin:40px auto;
+   width:80%
+}
+
+@media(max-width:1200px){
+   .mission .right p{
+      font-size:.8rem;
+      margin:20px auto;
+   }
+   .about .left p{
+      font-size:.8rem;
+      margin:20px auto;
+   }
+}
+
+
+@media(max-width:992px){
+   .about .left{
+   width:100%; 
+}
+   .about .right{
+   width:100%; 
+}
+      .mission .left{
+   width:100%; 
+}
+   .mission .right{
+   width:100%; 
+}
+   .team .card{ 
+   width:40%;
+}   
+}
+
+.our-team-header{
+  font-size: 40px;
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 58px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.user-photo-1 {
+  margin: 5% auto;
+  width: 42%;
+}
+
+.user-photo-2 {
+ margin: 5% auto;
+ width: 40%;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: 1px solid #00A8A8;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #00A8A8;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+  &:hover {
+     color: #000;
+     background-color: #fff;
+   }
+}
+
+@media(max-width:768px){
+  .team .card{ 
+width:100%;
+} 
+.column {
+padding: 3%;
+ width: 100%;
+}
+.about-header{
+padding-top: 50%;
+font-size: 60px;
+background-image:url(/assets/images/Rectangle-10-2.png);
+}
+}
+
+/*Old about*/
+/*
+.content {
+  background-color: #fff;
+  font-size: 40px;
+  padding: 60px 50px;
+  height: 170vh; 
+}
+
+.about-us-header {
+   font-size: 40px;
+}
+ 
+ .about-section {
+   margin: 2% 20%;
+   padding: 150px;
+   text-align: center;
+   background-image: url(/assets/images/img_10-2.png);
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+   color: #fff;
+   .about-us-header-2{
+      font-size: 30px;
+   }
+   .about-us-text {
+      font-size: 20px;
+   }
+ }
+
+ .row {
+  font-size: 25px;
+ }
+ 
+ .container {
+   padding: 0 16px;
+ }
+ 
+ .container::after, .row::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
+
+ .our-team-header{
+   font-size: 40px;
+   text-align: center;
+}
+
+.column {
+   float: left;
+   width: 50%;
+   margin-bottom: 16px;
+   padding: 0 58px;
+ }
+ 
+ .card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   margin: 8px;
+ }
+
+ .user-photo-1 {
+   margin: 5% auto;
+   width: 42%;
+ }
+
+ .user-photo-2 {
+  margin: 5% auto;
+  width: 40%;
+}
+ 
+ .title {
+   color: grey;
+ }
+ 
+ .button {
+   border: 1px solid #000;
+   outline: 0;
+   display: inline-block;
+   padding: 8px;
+   color: white;
+   background-color: #000;
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+   &:hover {
+      color: #000;
+      background-color: #fff;
+    }
+ }
+ 
+ @media (max-width: 650px) {
+   .column {
+    padding: 0;
+     width: 100%;
+   }
+   .content {
+    background-color: #fff;
+    font-size: 40px;
+    padding: 50px;
+    height: 180vh; 
+  }
+  .about-section {
+    margin: 2% 0;
+    padding: 15%;
+    background-image: url(/assets/images/Rectangle-10-2.png);
+  }
+  .hero-banner {
+  margin: 3% 0;
+  align-items: center;
+  height: 10vh;
+  justify-content: center;
+  }
+  .hero-banner__title {
+    font-size: 50px;
+    font-weight: 600;
+    padding: 0 20px;
+  }
+  .hero-banner__image {
+    width: 100%;
+  }
+ }
+
+ .hero-banner {
+  margin: 3% 0;
+  align-items: center;
+  display: flex;
+  height: 70vh;
+  position: relative;
+  justify-content: center;
+  z-index: -1;
+}
+
+.hero-banner__title {
+  color: #000;
+  font-size: 100px;
+  font-weight: 700;
+  padding: 0 20px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-banner__stroked-title {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+}
+
+.hero-banner__image {
+  border-radius: 20px;
+  position: fixed;
+  transform: rotate(-15deg);
+  width: 35%;
+  margin: 5%;
+}
+*/

@@ -70,6 +70,8 @@ import { AdminPromocodeComponent } from './components/admin-promocode/admin-prom
 import { AdminUsersListComponent } from './components/admin-users-list/admin-users-list.component';
 import { AdminCarListComponent } from './components/admin-car-list/admin-car-list.component';
 import { AdminCheckDocumentsComponent } from './components/admin-check-documents/admin-check-documents.component';
+import { CarMapInformationComponent } from './components/car-map-information/car-map-information.component';
+import { TripMapInformationComponent } from './components/trip-map-information/trip-map-information.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +99,9 @@ import { AdminCheckDocumentsComponent } from './components/admin-check-documents
     AdminPromocodeComponent,
     AdminUsersListComponent,
     AdminCarListComponent,
-    AdminCheckDocumentsComponent
+    AdminCheckDocumentsComponent,
+    CarMapInformationComponent,
+    TripMapInformationComponent
   ],
   imports: [
     BrowserModule,

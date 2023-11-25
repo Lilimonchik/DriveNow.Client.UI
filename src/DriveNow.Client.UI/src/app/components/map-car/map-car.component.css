@@ -109,39 +109,25 @@
   display: flex;
   justify-content: center;
 }
-.content .content-car {
-  z-index: 3;
+.content .back-button {
   position: absolute;
-  max-width: 1000px;
-  width: 100%;
-  bottom: 0;
-  display: flex;
-  margin: auto;
-  height: 80px;
-  border-radius: 10px;
-  background: #FFFFFF;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-bottom: 1%;
-  justify-content: space-around;
-  padding: 2%;
-  align-items: center;
+  z-index: 3;
+  top: 3%;
+  left: 1%;
 }
-.content .content-rent {
-  z-index: 3;
-  position: absolute;
-  max-width: 1000px;
+.content .car-info {
+  padding: 1%;
   width: 100%;
-  bottom: 0;
-  display: flex;
-  margin: auto;
-  height: 80px;
-  border-radius: 10px;
-  background: #FFFFFF;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-bottom: 1%;
-  justify-content: space-around;
-  padding: 2%;
-  align-items: center;
+  position: absolute;
+  z-index: 3;
+  bottom: 2%;
+  left: 15%;
+}
+
+@media (max-width: 1190px) {
+  .content .car-info {
+    left: 0;
+  }
 }
 
 /*# sourceMappingURL=map-car.component.css.map */

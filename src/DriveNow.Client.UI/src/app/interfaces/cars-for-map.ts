@@ -1,21 +1,24 @@
 export class CarsForMap{
-    // @ts-ignore
-    carId: string;
-    // @ts-ignore
-    nameCar: string;
 
-    // @ts-ignore
-    price: number;
+    carId: string = '';
 
-    // @ts-ignore
-    discount: number;
+    nameCar: string = '';
 
-    // @ts-ignore
-    address: string;
+    price: number = 0;
 
-    // @ts-ignore
-    category: string;
+    discount: number = 0;
 
-    // @ts-ignore
-    photoUrl: string;
+    latitude: number = 0;
+
+    longitude: number = 0;
+
+    category: string = '';
+
+    photoUrl: string = '';
+
+    powerReserve: string = '';
+
+    Free: string = '';
+
+    PhotoUrl: string = '';
 }

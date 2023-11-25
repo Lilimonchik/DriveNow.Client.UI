@@ -1,0 +1,31 @@
+.content-car {
+  z-index: 3;
+  position: absolute;
+  max-width: 1000px;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  margin: auto;
+  height: 80px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 1%;
+  justify-content: space-around;
+  padding: 2%;
+  align-items: center;
+}
+.content-car span {
+  font-family: Serif;
+  font-size: 20px;
+  padding-left: 3%;
+}
+.content-car div {
+  width: 25%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=car-map-information.component.css.map */

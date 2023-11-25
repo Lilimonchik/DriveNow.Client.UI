@@ -1,0 +1,17 @@
+ <div class="content-car">
+        <div class="car-information">
+            <mat-icon> directions_car</mat-icon>
+            <span>{{carInfo.nameCar}}</span>
+        </div>
+        <div class="car-price">
+            <mat-icon> attach_money</mat-icon>
+            <span>{{carInfo.price}}</span>
+        </div>
+        <div class="car-powerreserve">
+            <mat-icon>shutter_speed</mat-icon>
+            <span>{{carInfo.powerReserve}}</span>
+        </div>
+        <div class="car-action">
+            <button mat-raised-button (click)="startTrip(carInfo.carId)">Rent</button>
+        </div>
+ </div>
