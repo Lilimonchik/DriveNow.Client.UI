@@ -46,26 +46,11 @@
 
 </div>
 <div class="content">
-    <div class="content-car">
-        <div class="car-information">
-            <span>Car Name</span>
-        </div>
-        <div class="car-price">
-            <span>Price</span>
-        </div>
-        <div class="car-action">
-            <button mat-raised-button>Rent</button>
-        </div>
+    <div class="back-button">
+        <button mat-fab routerLink="/"><mat-icon>keyboard_backspace</mat-icon></button>
     </div>
-    <div class="content-rent">
-        <div class="content-name">
-            Car Name
-        </div>
-        <div class="content-timer">
-
-        </div>
-        <div class="content-action">
-            <button mat-raised-button color="warn">Stop</button>
-        </div>
+    <div class="car-info">
+            <app-trip-map-information *ngIf="tripInfo!=null" [carInfo]="tripInfo"></app-trip-map-information>
+            <app-car-map-information *ngIf="infoCarAll!=null" [carInfo]="infoCarAll"></app-car-map-information>
     </div>
 </div>

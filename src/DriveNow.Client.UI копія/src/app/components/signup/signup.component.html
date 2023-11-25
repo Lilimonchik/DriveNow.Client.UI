@@ -1,0 +1,67 @@
+<div class="content">
+    <div class="content-main">
+        <div class="sign-up">
+            <span class="span-sign-up">Sign Up</span>
+            <form
+                    class="sign-up-form"
+                    [formGroup]="singUpForm"
+                    (ngSubmit)="signUp()"
+            >
+                <div class="input-field">
+                    <input
+                            class="input-first-name"
+                            type="text"
+                            formControlName="firstName"
+                            placeholder="Firstname">
+                    <span class="dangerous-text" *ngIf="singUpForm.get('firstName')?.errors && singUpForm.get('firstName')?.touched">At least 1 letter.</span>
+                </div>
+                <div class="input-field">
+                    <input
+                            class="input-second-name"
+                            type="text"
+                            formControlName="secondName"
+                            placeholder="Lastname">
+                    <span class="dangerous-text" *ngIf="singUpForm.get('secondName')?.errors && singUpForm.get('secondName')?.touched">At least 1 letter.</span>
+                </div>
+                <div class="input-field">
+                    <input
+                            class="input-number-or-email"
+                            type="text"
+                            formControlName="emailOrNumber"
+                            placeholder="Number or Email">
+                    <span class="dangerous-text" *ngIf="singUpForm.get('emailOrNumber')?.hasError('emailOrNumber') && singUpForm.get('numberOrEmail')?.touched && singUpForm.get('numberOrEmail')?.errors">
+                        Invalid input. Please enter a valid number or email.
+                    </span>
+                </div>
+                <div class="input-field">
+                    <input
+                            class="input-password"
+                            type="password"
+                            formControlName="password"
+                            placeholder="Password">
+                    <span class="dangerous-text" *ngIf="singUpForm.get('password')?.errors && singUpForm.get('password')?.touched">At least 5 letter.</span>
+                </div>
+                <div class="input-field">
+                    <input
+                            class="input-confirm-password"
+                            type="password"
+                            formControlName="confirmPassword"
+                            placeholder="Confirm password">
+                    <span class="dangerous-text" *ngIf="singUpForm.get('confirmPassword')?.errors && singUpForm.get('confirmPassword')?.touched">At least 5 letter.</span>
+                    <div *ngIf="singUpForm.get('confirmPassword')?.hasError('confirmPassword')">Passwords do not match</div>
+                </div>
+                <div class="button-submit">
+                    <button type="submit" class="submit" >Sign Up</button>
+                </div>
+                <hr class="line">
+                <div class="google-input">
+                    <asl-google-signin-button type="standard" size="medium">
+                    </asl-google-signin-button>
+                </div>
+                <span class="account">Have no account yet?</span>
+                <button class="button-log-in" routerLink="/login"><span class="log-in">Log In</span></button>
+            </form>
+            <button mat-raised-button (click)="initiatePayment()">Click</button>
+        </div>
+    </div>
+</div>

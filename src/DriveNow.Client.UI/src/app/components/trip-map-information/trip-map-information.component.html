@@ -1,0 +1,17 @@
+<div class="content-car">
+    <div class="car-information">
+        <mat-icon> directions_car</mat-icon>
+        <span>{{carInfo.carName}}</span>
+    </div>
+    <div class="car-price">
+        <mat-icon> attach_money</mat-icon>
+        <span>{{carInfo.price}}</span>
+    </div>
+    <div class="car-powerreserve">
+        <mat-icon>shutter_speed</mat-icon>
+        <span>{{display}}</span>
+    </div>
+    <div class="car-action">
+        <button mat-raised-button (click)="createOrder('fafc9f5c-1cd7-4e8a-9354-68391b88f2aa')">Stop</button>
+    </div>
+</div>

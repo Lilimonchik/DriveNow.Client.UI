@@ -1,0 +1,42 @@
+<div class="content">
+    <div class="content-left">
+        <app-cabinet-list></app-cabinet-list>
+    </div>
+    <div class="content-right">
+        <div class="first-div" *ngIf="check">
+            <div class="promo-codes">
+                <div class="content-promo-codes">
+                    <span>Free Car</span>
+                    <span>1400$</span>
+                </div>
+            </div>
+            <button class="main-button" (click)="check=!check">
+                <mat-icon>add</mat-icon>
+                <span>Add Card</span>
+            </button>
+        </div>
+        <div class="second-div" *ngIf="!check">
+            <span class="add">Add Promo-code</span>
+            <form
+            [formGroup]="promo_code_group"
+            (ngSubmit)="addPromoCodeToAccount()"
+            class="promo-code-form"
+            >
+                <div class="field">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Promo-code name</mat-label>
+                        <input matInput type="text" formControlName="promocodeName">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Sum</mat-label>
+                        <input matInput type="text" formControlName="sum">
+                    </mat-form-field>
+                </div>
+                <div class="action">
+                    <button mat-raised-button color="warn" type="submit" (click)="check=!check">Edit</button>
+                    <button mat-button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

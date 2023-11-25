@@ -1,0 +1,37 @@
+<div class="content">
+   <div class="content-main">
+      <div class="log-in">
+         <span class="span-log-in">Log In</span>
+         <form
+         class="log-in-form"
+         [formGroup]="loginForm"
+         (ngSubmit)="login()"
+         >
+            <div class="input-field">
+               <input
+                       class="input-email-or-phone"
+                       type="text"
+                       formControlName="emailOrNumber"
+               placeholder="Number or email">
+            </div>
+            <div class="input-field">
+               <input
+                       class="input-password"
+                       type="password"
+                       formControlName="password"
+               placeholder="Password">
+            </div>
+            <div class="button-submit">
+            <button type="submit" class="submit" [disabled]="!loginForm.valid"> Log In</button>
+         </div>
+            <hr class="line">
+            <div class="google-input">
+               <asl-google-signin-button type="standard" size="medium">
+               </asl-google-signin-button>
+            </div>
+            <span class="account">Have no account yet?</span>
+            <button class="button-sign-up" routerLink="/signup"><span class="sign-up">Sign Up</span></button>
+         </form>
+      </div>
+   </div>
+</div>

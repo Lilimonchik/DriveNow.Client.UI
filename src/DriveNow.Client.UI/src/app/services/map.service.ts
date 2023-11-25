@@ -6,6 +6,7 @@ import {AUTH_API_URL} from "../app.injection-tokens";
 import {Order} from "../interfaces/order";
 import {Result} from "../interfaces/result";
 import {CartItem} from "../interfaces/cartItem";
+import {TripModel} from "../interfaces/TripModel";
 
 @Injectable({
   providedIn: 'root'
@@ -17,25 +18,18 @@ export class MapService {
               ) { }
 
   showCarsForMap(): Observable<CarsForMap[]>{
-    return this.http.get<CarsForMap[]>(`${this.apiUrl}CarAction/ShowCarsForMap`);
+    return this.http.get<CarsForMap[]>(`${this.apiUrl}CarController/ShowCarsForMap`);
+  }
+  createOrder(carId: string):Observable<string>{
+    // @ts-ignore
+    return this.http.post<string>(`${this.apiUrl}api/payment/create-payment`,{carId}, {responseType: 'text'});
   }
 
-  // @ts-ignore
-  changeStatus(carId: string): Observable<Result> {
-    return this.http.post<Result>(`${this.apiUrl}CarAction/${carId}/changeStatusById`, carId);
+  startTrip(CarId: string): Observable<TripModel>{
+    return this.http.post<TripModel>(`${this.apiUrl}TripController/StartTrip`,{CarId: CarId});
   }
 
-  createOrder(carId: string, promocode: string):Observable<Result>{
-    const model = new Order;
-    model.Promocode = promocode;
-    model.CarId = carId;
-    return this.http.post<Result>(`${this.apiUrl}OrderAction/CreateOrder`,model);
-  }
-
-  createCartItem(carId: string, price: number): Observable<Result>{
-    const model = new CartItem;
-    model.carId = carId;
-    model.price = price;
-    return this.http.post<Result>(`${this.apiUrl}CartController/AddCartItem`,model);
+  checkTrip(): Observable<TripModel>{
+    return this.http.get<TripModel>(`${this.apiUrl}TripController/CheckTrip`);
   }
 }

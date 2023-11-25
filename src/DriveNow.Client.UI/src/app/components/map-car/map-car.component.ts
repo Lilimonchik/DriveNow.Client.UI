@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+import {ChangeDetectorRef, Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {Loader} from "@googlemaps/js-api-loader";
 import {MapInfoWindow, MapMarker} from "@angular/google-maps";
 import {Position} from "../../interfaces/position";
@@ -8,6 +8,7 @@ import {Coordinates} from "../../interfaces/Coordinates";
 import {GeocodingService} from "../../services/geocoding.service";
 import {flatMap} from "rxjs";
 import {Order} from "../../interfaces/order";
+import {TripModel} from "../../interfaces/TripModel";
 
 @Component({
   selector: 'app-map-car',
@@ -20,132 +21,22 @@ export class MapCarComponent implements OnInit {
 
   }
 
-  /*
-    public urlIcon: string = "/assets/images/bmwe60.png"
+  @Output() markerClick: EventEmitter<any> = new EventEmitter();
 
-    map: any;
-
-    check: boolean = true;
-    timer: any;
-    count: number = 0;
-    seconds: number = 0;
-    minutes: number = 0;
-    hours: number = 0;
-    isTimerRunning: boolean = false;
-
-    order: Order = new Order();
-
-    latitude: number = -33.867;
-    longitude:number = 151.206;
-
-    mapOptions = {
-      zoom: 12,
-      center: {lat: this.latitude, lng: this.longitude},
-      scaleControl: false,
-      zoomControl: false,
-      fullscreenControl: false,
-      streetViewControl: false,
-      mapTypeControl: false,
-    }
-    @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
-    //markers: any[] = [];
-    public cars: CarsForMap[] = [];
-
-    public coordinates: Coordinates[] = [];
-
-    iconOptions: google.maps.Icon = {
-      url: '/assets/images/bmwe60.png',
-      scaledSize: new google.maps.Size(150, 60) // Set your desired height and width here
-    };
-    public geocoding!: google.maps.Geocoder;
-    ngOnInit() {
-      // Initialize the geocoding object
-      this.geocoding = new google.maps.Geocoder();
-
-      this.maps.showCarsForMap().subscribe((res) => {
-        console.log(res);
-        this.cars = res;
-        for (const car of res) {
-          this.geocoding.geocode({ address: car.address }, (results, status) => {
-            if (status === google.maps.GeocoderStatus.OK && results) {
-              const coordinate = {
-                latitude: results[0].geometry.location.lat(),
-                longitude: results[0].geometry.location.lng(),
-              };
-              this.coordinates.push(coordinate);
-            }
-          });
-        }
-      });
-      this.getLocation();
-    }
-    getLocation(){
-      if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition((position)=>{
-          this.latitude = position.coords.latitude;
-          this.longitude = position.coords.longitude;
-          console.log(this.longitude);
-        },
-            (error) =>{
-          this.latitude = -33.867;
-          this.longitude = 151.206;
-            })
-      }
-      else{
-        console.error("Geolocation is not supported by this browser.");
-      }
-    }
-    openInfoWindow(marker: MapMarker) {
-      if (this.infoWindow != undefined) this.infoWindow.open(marker);
-    }
-
-    startTimer() {
-      this.check = !this.check;
-      if (!this.isTimerRunning) {
-        this.isTimerRunning = true;
-        this.timer = setInterval(() => {
-          this.count++;
-          console.log(this.count)
-          this.updateTimerValues();
-        }, 1000); // Update count every 1000 milliseconds (1 second)
-      }
-    }
-
-    pauseTimer() {
-      this.check = !this.check;
-      if (this.isTimerRunning) {
-        clearInterval(this.timer);
-        this.isTimerRunning = false;
-        this.count = 0;
-      }
-    }
-    updateTimerValues() {
-      this.seconds = this.count % 60;
-      this.minutes = Math.floor((this.count / 60) % 60);
-      this.hours = Math.floor(this.count / 3600);
-    }
-
-    changeStatusCar(carId: string){
-      this.maps.changeStatus(carId).subscribe((res)=>{
-        console.log(res.message);
-      })
-    }
-
-    createOrder(carId: string, promocode: string){
-      this.maps.createOrder(carId,promocode).subscribe((res)=>{
-        console.log(res.message);
-      })
-    }
-
-    createCartItem(carId: string, price: number){
-      this.maps.createCartItem(carId,price).subscribe((res)=>{
-        console.log(res.message);
-      })
-    }
-   */
+  onMarkerClick(info: string) {
+    this.markerClick.emit({title: info });
+  }
   private map!: google.maps.Map;
 
   public cars: CarsForMap[] = [];
+
+  public carsShow! : CarsForMap | undefined;
+
+  public infoCarAll!: CarsForMap | undefined;
+
+  public tripInfo!: TripModel | null;
+
+  public markers: google.maps.Marker[] = [];
 
   public geocoding!: google.maps.Geocoder;
 
@@ -154,10 +45,21 @@ export class MapCarComponent implements OnInit {
 
   public coordinates: Coordinates[] = [];
 
+  public trip!: TripModel | null;
+
+
   check: boolean = true;
   infoWindowContent: string = '';
 
+  public icon = {
+    url: "./assets/images/marker-7246182_640.png", // url
+    scaledSize: new google.maps.Size(30, 40), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+  };
+
   ngOnInit() {
+    console.log(this.trip);
     this.getLocation();
     let loader = new Loader({
       apiKey: 'AIzaSyAl6G985ANRdxocfm2QYQzzPeHYqYdxDk4'
@@ -178,33 +80,108 @@ export class MapCarComponent implements OnInit {
       fullscreenControl: false,
       streetViewControl: false,
       mapTypeControl: false,
+      /*
+      styles: [
+        { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+        { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+        { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+        {
+          featureType: "administrative.locality",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#d59563" }],
+        },
+        {
+          featureType: "poi",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#d59563" }],
+        },
+        {
+          featureType: "poi.park",
+          elementType: "geometry",
+          stylers: [{ color: "#263c3f" }],
+        },
+        {
+          featureType: "poi.park",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#6b9a76" }],
+        },
+        {
+          featureType: "road",
+          elementType: "geometry",
+          stylers: [{ color: "#38414e" }],
+        },
+        {
+          featureType: "road",
+          elementType: "geometry.stroke",
+          stylers: [{ color: "#212a37" }],
+        },
+        {
+          featureType: "road",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#9ca5b3" }],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry",
+          stylers: [{ color: "#746855" }],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry.stroke",
+          stylers: [{ color: "#1f2835" }],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#f3d19c" }],
+        },
+        {
+          featureType: "transit",
+          elementType: "geometry",
+          stylers: [{ color: "#2f3948" }],
+        },
+        {
+          featureType: "transit.station",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#d59563" }],
+        },
+        {
+          featureType: "water",
+          elementType: "geometry",
+          stylers: [{ color: "#17263c" }],
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#515c6d" }],
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text.stroke",
+          stylers: [{ color: "#17263c" }],
+        },
+      ],*/
     });
-    this.geocoding = new google.maps.Geocoder();
-
-    this.maps.showCarsForMap().subscribe((res) => {
+    this.maps.checkTrip().subscribe((res) => {
+      this.trip = res;
       console.log(res);
-      this.cars = res;
-      for (const car of res) {
-        this.geocoding.geocode({address: car.address}, (results, status) => {
-          if (status === google.maps.GeocoderStatus.OK && results) {
-            const marker = new google.maps.Marker({
-              position: {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()},
-              map: this.map,
-              title: car.nameCar // Optional title
-            });
-            const infoWindow = new google.maps.InfoWindow({
-              content: this.infoWindowContent
-            });
-            marker.addListener('click', () => {
-            });
-          }
-        });
-        console.log(this.coordinates);
+      if(res.status){
+        var position = {lat: res.latitude, lng: res.longitude}
+        this.addMarker(position,res.carId);
+        console.log(this.markers);
       }
-    });
-    this.getLocation();
+    },
+        (error) => {
+          this.maps.showCarsForMap().subscribe((res) => {
+            console.log(res);
+            this.cars = res;
+            for (const car of res) {
+              var position = {lat: car.latitude, lng: car.longitude}
+              this.addMarker(position, car.carId);
+            }
+          });
+        })
   }
-
   getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -218,6 +195,57 @@ export class MapCarComponent implements OnInit {
           })
     } else {
       console.error("Geolocation is not supported by this browser.");
+    }
+  }
+
+  startTrip(carId: string){
+    this.maps.startTrip(carId).subscribe((res)=>{
+      this.deleteMarkers();
+      var position = {lat: res.latitude, lng: res.longitude}
+      this.addMarker(position,carId);
+    });
+  }
+  checkUserTrip(){
+    this.maps.checkTrip().subscribe((res)=>{
+      if(res != null){
+        this.trip = res;
+        console.log(res);
+      }
+    })
+  }
+
+  addMarker(position: google.maps.LatLng | google.maps.LatLngLiteral, carId: string) {
+    const marker = new google.maps.Marker({
+      position: position,
+      map: this.map,
+      icon: this.icon
+    });
+    marker.addListener('click',() => {
+      if(this.trip != null) {
+        this.tripInfo = this.trip;
+        console.log(this.tripInfo);
+      }
+      else if (this.cars.length != 0){
+        this.infoCarAll = this.cars.find(car => car.carId == carId);
+        this.carsShow = this.infoCarAll;
+      }
+    })
+    this.markers.push(marker);
+  }
+
+  // Removes the markers from the map, but keeps them in the array.
+  hideMarkers(): void {
+    this.setMapOnAll(null);
+  }
+
+  // Deletes all markers in the array by removing references to them.
+  deleteMarkers(): void {
+    this.hideMarkers();
+    this.markers = [];
+  }
+  setMapOnAll(map: google.maps.Map | null) {
+    for (let i = 0; i < this.markers.length; i++) {
+      this.markers[i].setMap(map);
     }
   }
 }

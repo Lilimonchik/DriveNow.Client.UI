@@ -1,0 +1,119 @@
+.carlisting {
+   max-width: 100%;
+}
+
+.carlisting-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+   grid-gap: 1%;
+   margin: 3%;
+}
+
+.carlisting-header {
+   font-size: 40px;
+   text-align: center;
+   margin: 2% 0;
+}
+
+@media (max-width:767px) {
+   .carlisting-header {
+      font-size: 25px;
+      text-align: center;
+      margin: 2% 0;
+   }
+}
+
+.carlisting-card {
+   height: 370px;
+   background: radial-gradient(circle, rgba(31,46,208,0.8576680672268908) 0%, rgba(0,168,168,0.8604691876750701) 100%);
+   border: none;
+   padding-top: 1%;
+   position: relative;
+   font-family: inherit;
+   margin: 5%;
+ }
+ 
+ .carlisting-description {
+   max-width: 100%;
+   margin: 0px auto;
+   font-weight: 400;
+   color: white;
+   display: block;
+   text-align: center;
+   padding-top: 5px;
+   font-size: 1em;
+ }
+ 
+.carlisting-img {
+   width: 85%;
+   height: 50%;
+   background: #e8e8e8;
+   margin: auto;
+   margin-top: 5%;
+ }
+
+ .carlisting-car-name {
+   font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 2%;
+    font-size: 1.6em;
+ }
+
+ .table-row {
+   font-size: 18px;
+ }
+ 
+ .carlisting-button {
+   padding: 3% 10%;
+   display: block;
+   margin: auto;
+   border: none;
+   margin-top: 5%;
+   background: #e8e8e8;
+   color: #111111;
+   font-weight: 600;
+   transition: 300ms;
+   &:hover {
+    background: #212121;
+    color: #ffffff;
+  }
+ }
+
+ .carlisting-table {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(79px, 1fr));
+  grid-gap: 1%;
+}
+
+.carlisting-description-text {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+ .carlisting-table-brand {
+   width: 20px;
+   margin-right: 5px;
+ }
+ .carlisting-table-type {
+   width: 20px;
+   margin-right: 5px;
+ }
+ .carlisting-table-year {
+   width: 16px;
+   margin-right: 5px;
+ }
+ .carlisting-table-seats {
+   width: 23px;
+   margin-right: 5px;
+ }
+ .carlisting-table-fuel {
+   width: 18px;
+   margin-right: 5px;
+ }
+ .carlisting-table-transmission{
+   width: 18px;
+   margin-right: 5px;
+ }
