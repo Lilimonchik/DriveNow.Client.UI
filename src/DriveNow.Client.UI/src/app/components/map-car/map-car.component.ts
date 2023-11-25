@@ -1,13 +1,8 @@
 import {ChangeDetectorRef, Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {Loader} from "@googlemaps/js-api-loader";
-import {MapInfoWindow, MapMarker} from "@angular/google-maps";
-import {Position} from "../../interfaces/position";
 import {MapService} from "../../services/map.service";
 import {CarsForMap} from "../../interfaces/cars-for-map";
 import {Coordinates} from "../../interfaces/Coordinates";
-import {GeocodingService} from "../../services/geocoding.service";
-import {flatMap} from "rxjs";
-import {Order} from "../../interfaces/order";
 import {TripModel} from "../../interfaces/TripModel";
 
 @Component({
@@ -62,7 +57,7 @@ export class MapCarComponent implements OnInit {
     console.log(this.trip);
     this.getLocation();
     let loader = new Loader({
-      apiKey: 'AIzaSyAl6G985ANRdxocfm2QYQzzPeHYqYdxDk4'
+      apiKey: 'AIzaSyDfzm6sjJfkjtkTZhDEdNPfKATc0TMKPTM'
     });
 
     loader.load().then(() => {
