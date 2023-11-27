@@ -851,6 +851,24 @@ figure.snip1390 .profile {
    grid-gap: 3%;
 }
 
+@media (max-width: 1265px) {
+   .popular-container{
+      margin-bottom: 5%;
+   }
+}
+
+@media (max-width: 816px) {
+   .popular-container{
+      margin-bottom: 20%;
+   }
+}
+
+@media (max-width: 600px) {
+   .popular-container{
+      padding-bottom: 20%;
+   }
+}
+
 @media (max-width: 450px) {
    .popular-container{
       margin: 2%;
@@ -861,7 +879,7 @@ figure.snip1390 .profile {
 }
 
 .popular-card{
-  padding: 25px;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   box-shadow: -9px 9px 18px #5a5a5a,
@@ -886,6 +904,17 @@ figure.snip1390 .profile {
 .popular-car-name{
    font-size: 23px;
    margin: 2% 0;
+}
+
+.popular-car-price{
+   color: #00A8A8;
+   font-size: 23px;
+   padding-left: 45%;
+}
+
+.popular-car-time{
+   color: #9e9e9ed8;
+   font-size: 18px;
 }
 
 .popular-car-desc{
@@ -926,19 +955,37 @@ figure.snip1390 .profile {
    }
 }
 
-.popular-car-rent-btn{
+.popular-button-container{
    margin-top: 3%;
+   display: flex;
 }
 
 .popular-car-rent-button {
+   width: 120px;
+   padding: 10%;
    font-size: 18px;
-   width: 40%;
-   height: 35px;;
    background-color: #161E21;
    color: #fff;
    transition: 0.3s;
    margin: 10px;
-   margin-left: 30%;
+   margin-left: 40%;
+   transition: 0.3s;
+   border: solid 1px grey;
+   &:hover {
+      background-color: #fff;
+      color: #161E21;
+   }
+}
+
+.popular-car-details-button{
+   width: 120px;
+   padding: 10%;
+   font-size: 18px;
+   background-color: #161E21;
+   color: #fff;
+   transition: 0.3s;
+   margin: 10px;
+   margin-left: 60%;
    transition: 0.3s;
    border: solid 1px grey;
    &:hover {
