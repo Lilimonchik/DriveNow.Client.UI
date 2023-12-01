@@ -1,4 +1,4 @@
-<div class="box">
+<!--<div class="box">
     <section class="contact-page-sec">
         <div class="container">
           <div class="row">
@@ -92,8 +92,6 @@
         </div>
     </section>
 </div>
-
-  <!--
     <div class="container">
         <section class="info">
            <p>
@@ -131,3 +129,75 @@
            </div>
        </form>
     </div>-->
+<div class="content">
+    <div class="content-first">
+        <div class="main-content">
+            <span class="main-text">Contact Us</span>
+            <span class="under-main-text">Any question or remarks? Just write us a message!</span>
+        </div>
+    </div>
+    <div class="content-second">
+        <div class="main-second-content">
+            <div class="content-left">
+                <div class="upper">
+                    <span class="contact">Contact Information</span>
+                    <span class="down-contact">Say something to start a live chat!</span>
+                </div>
+                <div class="middle">
+                    <div class="number">
+                        <img src="/assets/images/bxs_phone-call.png" alt="">
+                        <span>+1012 3456 789</span>
+                    </div>
+                    <div class="email">
+                        <img src="/assets/images/ic_sharp-email.png" alt="">
+                        <span>demo@gmail.com</span>
+                    </div>
+                    <div class="map">
+                        <img src="/assets/images/carbon_location-filled.png" alt="">
+                        <span class="location">132 Dartmouth Street Boston, Massachusetts 02156 United States</span>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="icon-messenger">
+                        <a href=""><img src="/assets/images/Group%201000001749.png" alt=""></a>
+                        <a href=""><img src="/assets/images/Group%201000001750.png" alt=""></a>
+                        <a href=""><img src="/assets/images/Group%201000001751.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="form-content">
+                    <form [formGroup]="contactUs">
+                        <div class="form-content-main">
+                            <div class="firstName">
+                                <input type="text" id="firstname" />
+                                <label for="firstname" class="label-main">First Name</label>
+                            </div>
+                            <div class="firstName">
+                                <input type="text" id="secondname" />
+                                <label for="secondname" class="label-main">Second Name</label>
+                            </div>
+                            <div class="firstName">
+                                <input type="text" id="email" />
+                                <label for="email" class="label-main">Email</label>
+                            </div>
+                            <div class="firstName">
+                                <input type="text" id="numberphone" />
+                                <label for="numberphone" class="label-main">Phone Number</label>
+                            </div>
+                        </div>
+                        <div class="form-content-message">
+                            <div class="message-field">
+                                <input type="text" id="message" />
+                                <label for="message" class="label-main">Message</label>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button>Send Message</button>
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
