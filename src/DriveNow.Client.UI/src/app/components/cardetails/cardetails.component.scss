@@ -117,30 +117,6 @@
   border-top:3px solid #d6d6d697;
   border-bottom:none;
 }
-
- @media (max-width: 985px) {
-  .card__content {
-    margin-top: 1%;
-    margin-left: 0;
-    width: 100%;
-   }
-
-   .card__text {
-    width: 100%;
-    left: 0;
-   }
-   .card__image {
-    position: relative;
-    margin: 1% 2%;
-    left: 2%;
-    top: 1%;
-    width: 92%;
-    img {
-     margin-top: 3%;
-     width: 100%;
-   }
-  }
-  }
   
   .card__button {
     display: inline-block;
@@ -157,59 +133,63 @@
     }
   }
 
-  .cardetails-specifications-header{
-    margin: 3% 0 2% 0;
-    font-size: 30px;
-    font-weight: 500;
+/*Specifications*/
+
+.cardetails-specifications-header{
+  margin: 3% 0 2% 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.cardetails-specifications-table {
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 3px;
+}
+
+.head-1 {
+  padding-left: 20px;
+}
+
+.cell-1 {
+  padding-left: 20px;
+}
+ 
+@media screen and (max-width:768px) {
+  .cardetails-specifications-table { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .head-1 {
+    padding-left: 0;
   }
-
-  .cardetails-specifications-type{ 
-    color: #585858; 
-    font-size: 20px;
-    padding-bottom: 1%;
-    padding-right: 50px;
+  
+  .cell-1 {
+    padding-left: 0;
   }
+}
 
-  .cardetails-specifications-type-2{ 
-    color: #585858; 
-    font-size: 20px;
-    padding-bottom: 1%;
-    padding-right: 50px;
-    padding-left: 150px;
-  }
-
-  .cardetails-specifications-item{
-    color: #585858; 
-    font-size: 20px;
-    padding-bottom: 1%;
-  }
-
-  @media screen and (max-width: 1400px) {
-
-  }
-
-  @media screen and (max-width: 710px) {
-    // table tr {
-    //   margin-bottom: 10px;
-    //   display: block;
-    //   border-bottom: 2px solid #ddd;
-    // }
-    // table td {
-    //   display: block;
-    //   text-align: right;
-    //   font-size: 13px;
-    //   border-bottom: 1px dotted #ccc;
-    //   border-right: 1px solid transparent;
-    // }
-    // table td:last-child {
-    //   border-bottom: 0;
-    // }
-    // table td:before {
-    //   content: attr(data-label);
-    //   float: left;
-    //   text-transform: uppercase;
-    //   font-weight: bold;
-    // }
+  @media (max-width: 1200px) {
+    .card__content {
+      margin-top: 1%;
+      margin-left: 0;
+      width: 100%;
+     }
+  
+     .card__text {
+      width: 100%;
+      left: 0;
+     }
+     .card__image {
+      position: relative;
+      margin: 1% 2%;
+      left: 2%;
+      top: 1%;
+      width: 92%;
+      img {
+       margin-top: 3%;
+       width: 100%;
+     }
+    }
   }
 
 
