@@ -1,125 +1,299 @@
-.profile {
-  font-size: 20px;
+/*.profile {
+   font-size: 20px;
 }
-
 .profile-container {
-  max-width: 100%;
-  margin: 0 0 2% 0;
+   max-width: 100%;
+   margin: 0 0 2% 0;
 }
-
 .profile-change-profile-icon {
-  float: right;
-  margin-top: 1%;
-  margin-right: 1%;
-  width: 25px;
-  cursor: pointer;
+   float: right;
+   margin-top: 1%;
+   margin-right: 1%;
+   width: 25px;
+   cursor: pointer;
 }
-
 .profile-header {
-  font-size: 40px;
-  text-align: center;
+   font-size: 40px;
+   text-align: center;
 }
 
-.profile-body {
-  margin: 0 40%;
+.profile-body{
+   margin: 0 40%;
 }
-
 .profile-user-info {
-  margin-top: 2%;
+   margin-top: 2%;
 }
 
 .profile-user-info-photo {
-  text-align: center;
+   text-align: center;
 }
-
 .profile-user-info-photo-icon {
-  width: 100px;
-  margin-right: 10%;
+   width: 100px;
+   margin-right: 10%;
 }
-
+.profile-user-info-name {
+}
+.profile-user-info-phone {
+}
 .profile-user-info-email {
-  margin-top: 3%;
+   margin-top: 3%;
 }
-
 .profile-user-info-email-icon {
-  width: 25px;
+   width: 25px;
 }
-
-.profile-user-info-history-icon {
-  width: 30px;
-  margin-right: 1%;
+.profile-user-info-history-icon{
+   width: 30px;
+   margin-right: 1%;
 }
-
 .profile-user-info-history {
-  text-align: left;
-  width: 100%;
-  margin-top: 10%;
-  font-size: 30px;
-  background-color: #fff;
+   text-align: left;
+   width: 100%;
+   margin-top: 10%;
+   font-size: 30px;
+   background-color: #fff;
 }
 
-.profile-border {
-  border: 1px grey;
+.profile-border{
+   border: 1px grey;
 }
-
 .profile-payments-ballance {
-  margin-top: 5%;
-  padding: 5%;
-  background-color: #00A8A8;
+   margin-top: 5%;
+   padding: 5%;
+   background-color: #00A8A8;
 }
-
 .profile-payments-ballance-text {
-  font-size: 18px;
+   font-size: 18px;
 }
-
-.profile-payments-ballance-amount {
-  font-size: 25px;
+.profile-payments-ballance-amount{
+   font-size: 25px;
 }
-
 .profile-payments-ballance-history {
-  width: 100%;
-  margin-top: 5%;
-  font-size: 23px;
-  background-color: #fff;
+   width: 100%;
+   margin-top: 5%;
+   font-size: 23px;
+   background-color: #fff;
 }
-
 .profile-payments-ballance-history-icon {
-  margin-right: 2%;
-  width: 25px;
+   margin-right: 2%;
+   width: 25px;
 }
-
+.profile-payment-methods {
+}
 .profile-payments-payment-methods-visa {
-  font-size: 30px;
+   font-size: 30px;
 }
-
 .profile-payment-methods-visa-icon {
-  width: 50px;
+   width: 50px;
 }
-
+.profile-payments-payment-methods-master-card {
+}
 .profile-payment-methods-master-card-icon {
-  width: 50px;
+   width: 50px;
 }
-
+.profile-payments-payment-methods-add {
+}
 .profile-payment-methods-card-icon {
-  width: 50px;
+   width: 50px;
 }
-
+.profile-saved-places {
+}
+.profile-saved-places-home {
+}
 .profile-saved-places-home-icon {
-  width: 30px;
+   width: 30px;
 }
-
+.profile-saved-places-job {
+}
 .profile-saved-places-job-icon {
-  width: 30px;
+   width: 30px;
 }
-
+.profile-other-settings {
+}
+.profile-other-settings-language {
+}
+.profile-other-settings-actual-language {
+}
+.profile-log-out {
+}
 .profile-log-out-btn {
-  font-size: 30px;
-  cursor: pointer;
+   font-size: 30px;
+   cursor: pointer;
+}
+.profile-log-out-button {
+   width: 30px;
+   margin-right: 5%;
+}
+*/
+.content {
+  width: 100%;
+  display: flex;
+}
+.content .content-left {
+  max-width: 30%;
+}
+.content .content-right {
+  width: 70%;
+}
+.content .content-right .upload-form {
+  margin: 44px;
+  padding: 4%;
+  max-width: 1136px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 10px 20px 0px rgba(194, 194, 194, 0.16), 0px 0px 30px 0px rgba(170, 170, 170, 0.16);
+}
+.content .content-right .upload-form .main-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Courier New";
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.content .content-right .upload-form .add-photo-for-user {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #4C535F;
+  margin-bottom: 40px;
+}
+.content .content-right .upload-form .add-photo-for-user .user-photo-upload {
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  margin-bottom: 15px;
+}
+.content .content-right .upload-form .add-photo-for-user .photo-field {
+  width: 130px;
+  height: 132px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: 1px dashed #4C535F;
+  background: #EDF2F6;
+}
+.content .content-right .upload-form .add-photo-for-user .photo-field .field {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+.content .content-right .upload-form .add-photo-for-user .photo-field .field .photo-span {
+  color: #4C535F;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  margin-top: 10px;
+  width: 70px;
+}
+.content .content-right .upload-form .line {
+  width: 100%;
+  border: 1px solid #E0E4EC;
+}
+.content .content-right .upload-form .main-form {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  width: 100%;
+}
+.content .content-right .upload-form .main-form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+.content .content-right .upload-form .main-form div input {
+  width: 400px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #E0E4EC;
+  background: linear-gradient(0deg, #EDF2F6 0%, #EDF2F6 100%), #FFF;
+  font-size: 15px;
+  padding-left: 20px;
+}
+.content .content-right .upload-form .main-form div label {
+  color: #4C535F;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 112.4%; /* 17.984px */
+  display: flex;
+  margin-bottom: 10px;
+}
+.content .content-right .upload-form .bio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.content .content-right .upload-form .bio textarea {
+  width: 100%;
+  height: 158px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #E0E4EC;
+  background: linear-gradient(0deg, #EDF2F6 0%, #EDF2F6 100%), #FFF;
+  font-size: 15px;
+  padding: 20px;
+  line-height: 20px;
+}
+.content .content-right .upload-form .bio label {
+  color: #4C535F;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 112.4%; /* 17.984px */
+  display: flex;
+  margin-bottom: 10px;
+}
+.content .content-right .upload-form .action {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+}
+.content .content-right .upload-form .action .buttons {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+.content .content-right .upload-form .action .buttons .update {
+  width: 150px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #D74632;
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+}
+.content .content-right .upload-form .action .buttons .reset {
+  color: #4C535F;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: #FFFFFF;
 }
 
-.profile-log-out-button {
-  width: 30px;
-  margin-right: 5%;
+@media (max-width: 1130px) {
+  .content .content-left {
+    display: none;
+  }
+  .content .content-right {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=profile.component.css.map */

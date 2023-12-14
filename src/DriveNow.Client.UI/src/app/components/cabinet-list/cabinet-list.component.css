@@ -1,45 +1,50 @@
+@import url("https://fonts.google.com/specimen/Manrope?query=Manrope");
 .content {
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
 }
-.content .content-main {
-  position: relative;
-  width: 260px;
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 10%;
-  margin-top: 2%;
-  padding-left: 1%;
+.content .main-content {
+  width: 262px;
+  height: 90%;
+  flex-shrink: 0;
   border-radius: 10px;
   background: #FFF;
   box-shadow: 0px 0px 30px 0px rgba(170, 170, 170, 0.16);
-}
-.content div {
+  margin-left: 100px;
+  margin-right: 30px;
+  margin-top: 30px;
+  margin-bottom: 44px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
   padding-top: 25px;
-  padding-left: 4%;
+  position: relative;
 }
-.content span:hover {
-  color: #05a8a9;
+.content .main-content div {
+  display: flex;
+  width: 180px;
+  height: 40px;
+  align-items: center;
+  margin-bottom: 5px;
 }
-.content span {
+.content .main-content div img {
+  margin-right: 10px;
+}
+.content .main-content div span {
   color: #4C535F;
-  font-family: "Roboto", sans-serif;
+  font-family: "Manrope";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-left: 14px;
 }
-.content .settings .settings-span {
+.content .main-content .fourth span {
   color: red;
 }
-.content .log-out {
+.content .main-content .log-out {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
+  left: 10%;
 }
 
 /*# sourceMappingURL=cabinet-list.component.css.map */

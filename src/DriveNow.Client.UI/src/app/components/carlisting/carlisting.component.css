@@ -24,45 +24,77 @@
 }
 .carlisting-card {
   height: 370px;
-  background: radial-gradient(circle, rgba(31, 46, 208, 0.8576680672) 0%, rgba(0, 168, 168, 0.8604691877) 100%);
+  background: #ffffff;
   border: none;
-  border-radius: 10px;
   padding-top: 1%;
   position: relative;
   font-family: inherit;
   margin: 5%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -9px 9px 18px #5a5a5a, 9px -9px 18px #ffffff;
 }
 
 .carlisting-description {
   max-width: 100%;
-  margin: 0px auto;
+  margin: 0;
   font-weight: 400;
-  color: white;
+  color: black;
   display: block;
   text-align: center;
   padding-top: 5px;
   font-size: 1em;
 }
 
-.carlisting-img {
-  width: 85%;
-  height: 50%;
-  background: #e8e8e8;
-  border-radius: 10px;
-  margin: auto;
-  margin-top: 5%;
-}
-
 .carlisting-car-name {
+  text-align: left;
   font-weight: 600;
-  color: white;
-  text-align: center;
+  color: black;
   display: block;
   padding-top: 2%;
   font-size: 1.6em;
 }
 
-.table-row {
+.carlisting-car-type {
+  color: #90A3BF;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.carlisting-img {
+  width: 100%;
+  height: 80%;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.carlisting-image {
+  width: 100%;
+  height: 50%;
+  margin-top: 3%;
+}
+
+.carlisting-car-specs {
+  color: #90A3BF;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+  margin-right: 5%;
+}
+
+.carlisting-car-price {
+  color: black;
+  font-size: 23px;
+  padding-left: 45%;
+}
+
+.carlisting-car-time {
+  color: #90A3BF;
   font-size: 18px;
 }
 
@@ -70,59 +102,241 @@
   padding: 3% 10%;
   display: block;
   margin: auto;
-  border-radius: 8px;
   border: none;
   margin-top: 5%;
-  background: #e8e8e8;
-  color: #111111;
+  background: black;
+  color: white;
   font-weight: 600;
   transition: 300ms;
+  border: 1px solid black;
 }
 .carlisting-button:hover {
-  background: #212121;
-  color: #ffffff;
+  background: white;
+  color: black;
 }
 
-.carlisting-table {
-  margin-top: 3%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(79px, 1fr));
-  grid-gap: 1%;
+/*Heart*/
+#main-content {
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: right;
+  text-align: center;
 }
 
-.carlisting-description-text {
-  font-size: 14px;
-  margin-right: 5px;
+svg {
+  cursor: pointer;
+  overflow: visible;
+  width: 40px;
+}
+svg #heart {
+  transform-origin: center;
+  animation: animateHeartOut 0.3s linear forwards;
+}
+svg #main-circ {
+  transform-origin: 29.5px 29.5px;
 }
 
-.carlisting-table-brand {
-  width: 20px;
-  margin-right: 5px;
+#checkbox {
+  display: none;
 }
 
-.carlisting-table-type {
-  width: 20px;
-  margin-right: 5px;
+#checkbox:checked + label svg #heart {
+  transform: scale(0.2);
+  fill: #E2264D;
+  animation: animateHeart 0.3s linear forwards 0.25s;
+}
+#checkbox:checked + label svg #main-circ {
+  transition: all 2s;
+  animation: animateCircle 0.3s linear forwards;
+  opacity: 1;
+}
+#checkbox:checked + label svg #grp1 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+#checkbox:checked + label svg #grp1 #oval1 {
+  transform: scale(0) translate(0, -30px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp1 #oval2 {
+  transform: scale(0) translate(10px, -50px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp2 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+#checkbox:checked + label svg #grp2 #oval1 {
+  transform: scale(0) translate(30px, -15px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp2 #oval2 {
+  transform: scale(0) translate(60px, -15px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp3 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+#checkbox:checked + label svg #grp3 #oval1 {
+  transform: scale(0) translate(30px, 0px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp3 #oval2 {
+  transform: scale(0) translate(60px, 10px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp4 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+#checkbox:checked + label svg #grp4 #oval1 {
+  transform: scale(0) translate(30px, 15px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp4 #oval2 {
+  transform: scale(0) translate(40px, 50px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp5 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+#checkbox:checked + label svg #grp5 #oval1 {
+  transform: scale(0) translate(-10px, 20px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp5 #oval2 {
+  transform: scale(0) translate(-60px, 30px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp6 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+#checkbox:checked + label svg #grp6 #oval1 {
+  transform: scale(0) translate(-30px, 0px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp6 #oval2 {
+  transform: scale(0) translate(-60px, -5px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp7 {
+  opacity: 1;
+  transition: 0.1s all 0.3s;
+}
+#checkbox:checked + label svg #grp7 #oval1 {
+  transform: scale(0) translate(-30px, -15px);
+  transform-origin: 0 0 0;
+  transition: 0.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp7 #oval2 {
+  transform: scale(0) translate(-55px, -30px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform 0.3s;
+}
+#checkbox:checked + label svg #grp2 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+#checkbox:checked + label svg #grp3 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+#checkbox:checked + label svg #grp4 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+#checkbox:checked + label svg #grp5 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+#checkbox:checked + label svg #grp6 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
+}
+#checkbox:checked + label svg #grp7 {
+  opacity: 1;
+  transition: 0.1s opacity 0.3s;
 }
 
-.carlisting-table-year {
-  width: 20px;
-  margin-right: 5px;
+@keyframes animateCircle {
+  40% {
+    transform: scale(10);
+    opacity: 1;
+    fill: #DD4688;
+  }
+  55% {
+    transform: scale(11);
+    opacity: 1;
+    fill: #D46ABF;
+  }
+  65% {
+    transform: scale(12);
+    opacity: 1;
+    fill: #CC8EF5;
+  }
+  75% {
+    transform: scale(13);
+    opacity: 1;
+    fill: transparent;
+    stroke: #CC8EF5;
+    stroke-width: 0.5;
+  }
+  85% {
+    transform: scale(17);
+    opacity: 1;
+    fill: transparent;
+    stroke: #CC8EF5;
+    stroke-width: 0.2;
+  }
+  95% {
+    transform: scale(18);
+    opacity: 1;
+    fill: transparent;
+    stroke: #CC8EF5;
+    stroke-width: 0.1;
+  }
+  100% {
+    transform: scale(19);
+    opacity: 1;
+    fill: transparent;
+    stroke: #CC8EF5;
+    stroke-width: 0;
+  }
 }
-
-.carlisting-table-seats {
-  width: 20px;
-  margin-right: 5px;
+@keyframes animateHeart {
+  0% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
-.carlisting-table-fuel {
-  width: 20px;
-  margin-right: 5px;
-}
-
-.carlisting-table-transmission {
-  width: 20px;
-  margin-right: 5px;
+@keyframes animateHeartOut {
+  0% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=carlisting.component.css.map */

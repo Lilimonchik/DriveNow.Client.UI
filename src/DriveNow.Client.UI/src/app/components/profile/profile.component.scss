@@ -1,4 +1,4 @@
-.profile {
+/*.profile {
    font-size: 20px;
 }
 .profile-container {
@@ -122,4 +122,178 @@
 .profile-log-out-button {
    width: 30px;
    margin-right: 5%;
+}
+*/
+.content{
+   width: 100%;
+   display: flex;
+   .content-left{
+      max-width: 30%;
+   }
+   .content-right{
+      width: 70%;
+      //border: 1px solid;
+      .upload-form{
+         margin: 44px;
+         padding: 4%;
+         max-width: 1136px;
+         flex-shrink: 0;
+         border-radius: 10px;
+         background: #FFF;
+         box-shadow: 0px 10px 20px 0px rgba(194, 194, 194, 0.16), 0px 0px 30px 0px rgba(170, 170, 170, 0.16);
+         .main-text{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-family: "Courier New";
+            font-size: 25px;
+            margin-bottom: 10px;
+         }
+         .add-photo-for-user{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            color: #4C535F;
+            margin-bottom: 40px;
+            .user-photo-upload{
+               font-family: Manrope;
+               font-size: 16px;
+               font-style: normal;
+               font-weight: 500;
+               line-height: normal;
+               display: flex;
+               margin-bottom: 15px;
+            }
+            .photo-field{
+               width: 130px;
+               height: 132px;
+               flex-shrink: 0;
+               display: flex;
+               flex-direction: column;
+               border-radius: 18px;
+               border: 1px dashed #4C535F;
+               background: #EDF2F6;
+               .field{
+                  display: flex;
+                  flex-direction: column;
+                  margin: auto;
+                  align-items: center;
+                  .photo-span{
+                     color: #4C535F;
+                     text-align: center;
+                     font-family: Manrope;
+                     font-size: 12px;
+                     font-style: normal;
+                     font-weight: 500;
+                     line-height: normal;
+                     display: flex;
+                     margin-top: 10px;
+                     width: 70px;
+                  }
+               }
+            }
+         }
+         .line{
+            width: 100%;
+            border: 1px solid #E0E4EC;
+         }
+         .main-form{
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            width: 100%;
+            div{
+               display: flex;
+               flex-direction: column;
+               margin-bottom: 18px;
+               input{
+                  width: 400px;
+                  height: 42px;
+                  flex-shrink: 0;
+                  border-radius: 8px;
+                  border: 1px solid #E0E4EC;
+                  background: linear-gradient(0deg, #EDF2F6 0%, #EDF2F6 100%), #FFF;
+                  font-size: 15px;
+                  padding-left: 20px;
+               }
+               label{
+                  color: #4C535F;
+                  font-family: Manrope;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 112.4%; /* 17.984px */
+                  display: flex;
+                  margin-bottom: 10px;
+               }
+            }
+         }
+         .bio{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            textarea {
+               width: 100%;
+               height: 158px;
+               flex-shrink: 0;
+               border-radius: 8px;
+               border: 1px solid #E0E4EC;
+               background: linear-gradient(0deg, #EDF2F6 0%, #EDF2F6 100%), #FFF;
+               font-size: 15px;
+               padding: 20px;
+               line-height: 20px;
+            }
+            label {
+               color: #4C535F;
+               font-family: Manrope;
+               font-size: 14px;
+               font-style: normal;
+               font-weight: 500;
+               line-height: 112.4%; /* 17.984px */
+               display: flex;
+               margin-bottom: 10px;
+            }
+            }
+         .action{
+            width: 100%;
+            display: flex;
+            margin-top: 30px;
+            .buttons{
+               display: flex;
+               width: 30%;
+               justify-content: space-around;
+               .update{
+                  width: 150px;
+                  height: 40px;
+                  flex-shrink: 0;
+                  border-radius: 8px;
+                  background: #D74632;
+                  color: #FFF;
+                  font-family: Manrope;
+                  font-size: 16px;
+                  font-style: normal;
+               }
+               .reset{
+                  color: #4C535F;
+                  font-family: Manrope;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                  background: #FFFFFF;
+               }
+            }
+         }
+         }
+      }
+   }
+@media (max-width: 1130px) {
+   .content{
+      .content-left{
+         display: none;
+      }
+      .content-right{
+         width: 100%;
+      }
+   }
 }

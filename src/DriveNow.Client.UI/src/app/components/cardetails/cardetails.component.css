@@ -20,9 +20,10 @@
 }
 
 .card {
+  border-radius: 0;
   max-width: 95%;
   height: auto;
-  margin: 4%;
+  margin: 3%;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -30,17 +31,12 @@
 
 .card__image {
   position: absolute;
+  left: 2%;
+  top: 3%;
+  width: 48%;
 }
-
 .card__image img {
   width: 100%;
-  max-height: 440px;
-}
-
-.card__image {
-  left: 2%;
-  top: 4%;
-  width: 48%;
 }
 
 .stars {
@@ -62,6 +58,12 @@
   font-weight: 600;
 }
 
+.cardetails-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #161E21;
+}
+
 .card__content {
   top: 0;
   margin-left: 50%;
@@ -78,6 +80,13 @@
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.line-1 {
+  margin: 1% 0;
+  width: 100%;
+  border-top: 3px solid rgba(214, 214, 214, 0.5921568627);
+  border-bottom: none;
 }
 
 .card__text {
@@ -101,88 +110,83 @@
   color: #000;
 }
 
-.carlisting-description {
-  max-width: 100%;
-  font-weight: 400;
-  color: #000;
-  display: block;
-  padding-top: 5px;
-  font-size: 1em;
-  margin-top: 2%;
+.line-2 {
+  margin: 2% 0 0 0;
+  width: 100%;
+  border-top: 3px solid rgba(214, 214, 214, 0.5921568627);
+  border-bottom: none;
 }
 
-.carlisting-table {
-  margin-top: 3%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 3%;
-}
-
-.carlisting-description-text {
+.card__button {
+  display: inline-block;
   font-size: 20px;
-  margin-right: 5px;
+  padding: 10px 30px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border: solid 1px grey;
+  transition: 500ms;
+}
+.card__button:hover {
+  background-color: #fff;
+  color: #000;
 }
 
-.carlisting-table-brand {
-  width: 20px;
-  margin-right: 5px;
+/*Specifications*/
+.cardetails-specifications-header {
+  margin: 3% 0 2% 0;
+  font-size: 30px;
+  font-weight: 500;
 }
 
-.carlisting-table-type {
-  width: 20px;
-  margin-right: 5px;
+.cardetails-specifications-table {
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 3px;
 }
 
-.carlisting-table-year {
-  width: 20px;
-  margin-right: 5px;
+.head-1 {
+  padding-left: 20px;
 }
 
-.carlisting-table-seats {
-  width: 20px;
-  margin-right: 5px;
+.cell-1 {
+  padding-left: 20px;
 }
 
-.carlisting-table-fuel {
-  width: 20px;
-  margin-right: 5px;
+@media screen and (max-width: 768px) {
+  .cardetails-specifications-table {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .head-1 {
+    padding-left: 0;
+  }
+  .cell-1 {
+    padding-left: 0;
+  }
 }
-
-.carlisting-table-transmission {
-  width: 20px;
-  margin-right: 5px;
+@media (max-width: 1200px) {
+  .card__content {
+    margin-top: 1%;
+    margin-left: 0;
+    width: 100%;
+  }
+  .card__text {
+    width: 100%;
+    left: 0;
+  }
+  .card__image {
+    position: relative;
+    margin: 1% 2%;
+    left: 2%;
+    top: 1%;
+    width: 92%;
+  }
+  .card__image img {
+    margin-top: 3%;
+    width: 100%;
+  }
 }
-
-.carlisting-table-doors {
-  width: 20px;
-  margin-right: 5px;
-}
-
-.carlisting-table-wheel {
-  width: 20px;
-  margin-right: 5px;
-}
-
-.carlisting-table-consumption {
-  width: 20px;
-  margin-right: 5px;
-}
-
-.carlisting-table-trunk {
-  width: 20px;
-  margin-right: 5px;
-}
-
-.carlisting-table-pinion {
-  width: 20px;
-  margin-right: 5px;
-}
-
-.carlisting-table-sound {
-  width: 20px;
-  margin-right: 5px;
-}
-
 /*Dropdown*/
 :root {
   --contentHeight: 30vh;
@@ -191,7 +195,7 @@
 
 section {
   max-width: var(--sectionWidth);
-  margin: 200px auto 1% auto;
+  margin: 1% auto 2% auto;
   width: 97%;
   color: #000;
 }
