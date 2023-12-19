@@ -1,0 +1,19 @@
+export class Car {
+    carId: string = "";
+    nameCar: string = "";
+    power: number = 0;
+    about: string = "";
+    accualFileUrl: string = "";
+    categoryForId: string = "";
+    discount: number  = 0;
+    expenditure: string = "";
+    free: number  = 0;
+    fromOneToHundred: number  = 0;
+    latitude: number  = 0;
+    longitude: number  = 0;
+    maxSpeed: number  = 0;
+    passengers: number  = 0;
+    powerReserve: string = "";
+    price: number  = 0;
+    year: string = "";
+}

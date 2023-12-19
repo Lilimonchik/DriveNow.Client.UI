@@ -1,7 +1,16 @@
+import {Car} from "./Enums/Car";
+
 export class Order{
 
-    Promocode?: string;
+    carId : string = "";
 
-    // @ts-ignore
-    CarId: string;
+    orderId: string = "";
+
+    car: Car = new Car();
+
+    orderTime: Date = new Date();
+
+    promocode: string = "";
+
+    totalPrice: number = 0;
 }

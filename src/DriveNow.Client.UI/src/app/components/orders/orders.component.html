@@ -3,14 +3,28 @@
         <app-cabinet-list></app-cabinet-list>
     </div>
     <div class="content-right">
-        <div class="main-order">
-            <mat-accordion multi>
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>№</mat-panel-title>
-                    </mat-expansion-panel-header>
-                </mat-expansion-panel>
-            </mat-accordion>
+        <div class="main-content">
+            <span class="order">Orders</span>
+            <div class="search">
+                <label for="sortingDropdown">Select Sorting Option:</label>
+                <select id="sortingDropdown" [(ngModel)]="selectedSortingOption" (ngModelChange)="onCarSelectionChange()">
+                    <option *ngFor="let option of sortingOptions" [value]="option">{{ option }}</option>
+                </select>
+            </div>
+            <table>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Time</th>
+                    <th>Price per hour</th>
+                    <th>Total price</th>
+                </tr>
+                <tr *ngFor="let order of orderList, let i = index">
+                    <td>{{i}}</td>
+                    <td>{{ order.orderTime | date: 'short'}}</td>
+                    <td>{{ order.car.price }}</td>
+                    <td>{{ order.totalPrice | currency:'USD':true }}</td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
