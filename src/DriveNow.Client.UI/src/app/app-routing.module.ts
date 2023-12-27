@@ -42,8 +42,7 @@ const routes: Routes = [
   {path: 'admin-users-list',component: AdminUsersListComponent, title: 'Admin-users-list'},
   {path: 'admin-car-list',component: AdminCarListComponent, title: 'Admin-car-list'},
   {path: 'admin-check-documents',component: AdminCheckDocumentsComponent, title: 'Admin-check-documents'},
-  
-
+  { path: 'cardetails/:carId', component: CardetailsComponent },
 ];
 
 @NgModule({

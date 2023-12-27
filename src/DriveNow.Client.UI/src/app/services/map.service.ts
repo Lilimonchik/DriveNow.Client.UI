@@ -1,5 +1,5 @@
 import {Inject, Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {CarsForMap} from "../interfaces/cars-for-map";
 import {AUTH_API_URL} from "../app.injection-tokens";
@@ -7,6 +7,7 @@ import {Order} from "../interfaces/order";
 import {Result} from "../interfaces/result";
 import {CartItem} from "../interfaces/cartItem";
 import {TripModel} from "../interfaces/TripModel";
+import {Car} from "../interfaces/Enums/Car";
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +32,13 @@ export class MapService {
 
   checkTrip(): Observable<TripModel>{
     return this.http.get<TripModel>(`${this.apiUrl}TripController/CheckTrip`);
+  }
+  
+  showAllCars(): Observable<Car[]>{
+    return this.http.get<Car[]>(`${this.apiUrl}CarController/ShowAllCars`);
+  }
+  showCarDetails(carId: string): Observable<Car>{
+    const params = new HttpParams().set('carId', carId);
+    return this.http.get<Car>(`${this.apiUrl}CarController/ShowCarDetails`,{params: params});
   }
 }

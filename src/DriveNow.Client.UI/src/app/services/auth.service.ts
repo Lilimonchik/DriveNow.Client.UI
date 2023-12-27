@@ -35,7 +35,7 @@ export class AuthService {
     )
   }
   public login(User: User){
-      return this.http.post(`${this.apiUrl}SingInController/SingInUser`,User,{responseType: 'text'}).pipe(
+      return this.http.post(`${this.apiUrl}SingIn/SingInUser`,User,{responseType: 'text'}).pipe(
           tap(token=>{
               if(token != null) {
                   localStorage.setItem(ACCESS_TOKEN_KEY, token);
